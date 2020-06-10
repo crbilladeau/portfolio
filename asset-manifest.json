@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.js": "/portfolio/static/js/main.0852b631.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.0852b631.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.f4f2abbf.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.f4f2abbf.js.map",
+    "static/css/2.8f2eca68.chunk.css": "/portfolio/static/css/2.8f2eca68.chunk.css",
+    "static/js/2.53ccb52e.chunk.js": "/portfolio/static/js/2.53ccb52e.chunk.js",
+    "static/js/2.53ccb52e.chunk.js.map": "/portfolio/static/js/2.53ccb52e.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.5630dd148f3a7f153785afc599da33b5.js": "/portfolio/precache-manifest.5630dd148f3a7f153785afc599da33b5.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.8f2eca68.chunk.css.map": "/portfolio/static/css/2.8f2eca68.chunk.css.map",
+    "static/js/2.53ccb52e.chunk.js.LICENSE.txt": "/portfolio/static/js/2.53ccb52e.chunk.js.LICENSE.txt",
+    "static/media/ACNH.png": "/portfolio/static/media/ACNH.a5806347.png",
+    "static/media/ACNH1.png": "/portfolio/static/media/ACNH1.50d84926.png",
+    "static/media/ACNH2.png": "/portfolio/static/media/ACNH2.fd1b6ab8.png",
+    "static/media/ACNH3.png": "/portfolio/static/media/ACNH3.1e6c37b3.png",
+    "static/media/ACNH4.png": "/portfolio/static/media/ACNH4.651ecbfd.png",
+    "static/media/apollo.png": "/portfolio/static/media/apollo.26039e3d.png",
+    "static/media/codesandbox.png": "/portfolio/static/media/codesandbox.d544ba7f.png",
+    "static/media/css.png": "/portfolio/static/media/css.d7b364ba.png",
+    "static/media/github.png": "/portfolio/static/media/github.8f45002d.png",
+    "static/media/go-far.PNG": "/portfolio/static/media/go-far.714f81af.PNG",
+    "static/media/graphql.png": "/portfolio/static/media/graphql.801b898d.png",
+    "static/media/html.png": "/portfolio/static/media/html.4e69cb13.png",
+    "static/media/javascript.png": "/portfolio/static/media/javascript.c5855bae.png",
+    "static/media/nodejs.png": "/portfolio/static/media/nodejs.1660d991.png",
+    "static/media/react.png": "/portfolio/static/media/react.c5ec02b7.png",
+    "static/media/reactnative.png": "/portfolio/static/media/reactnative.ff2e5be8.png",
+    "static/media/video-search-thumbnail.png": "/portfolio/static/media/video-search-thumbnail.1778bf89.png",
+    "static/media/webpack.png": "/portfolio/static/media/webpack.d44248d4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4f2abbf.js",
+    "static/css/2.8f2eca68.chunk.css",
+    "static/js/2.53ccb52e.chunk.js",
+    "static/js/main.0852b631.chunk.js"
+  ]
+}
