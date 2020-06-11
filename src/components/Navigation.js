@@ -71,7 +71,7 @@ const Navigation = () => {
           spy={true}
           smooth={true}
           offset={-70}
-          duration={500}
+          duration={1000}
         >
           <NavLinkStyle>RESUME ↓</NavLinkStyle>
         </ScrollLink>
@@ -84,8 +84,8 @@ const NavBarStyle = styled.div`
   background-color: transparent;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 40%;
+  justify-content: flex-end;
+  width: 100%;
   margin-top: 30px;
   overflow: hidden;
   position: fixed;

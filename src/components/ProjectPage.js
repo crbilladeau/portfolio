@@ -28,8 +28,7 @@ const ProjectPage = ({
 
   return (
     <ProjectWrapper id='project'>
-      <motion.div
-        className='hexagon-project'
+      <Hexagon
         initial='out'
         animate='in'
         exit='out'
@@ -37,8 +36,7 @@ const ProjectPage = ({
         transition={hexagonTransition}
       >
         <InfoContainer>
-          <motion.div
-            className='box'
+          <TextBox
             initial='out'
             animate='in'
             exit='out'
@@ -65,12 +63,11 @@ const ProjectPage = ({
             <InfoHeader>Technologies Used</InfoHeader>
             <LineBreak />
             <TechList>{techList}</TechList>
-          </motion.div>
+          </TextBox>
         </InfoContainer>
-      </motion.div>
+      </Hexagon>
 
-      <motion.div
-        className='gallery-box'
+      <GalleryBox
         initial='out'
         animate='in'
         exit='out'
@@ -78,7 +75,7 @@ const ProjectPage = ({
         transition={galleryTransition}
       >
         <GalleryChanger images={images} />
-      </motion.div>
+      </GalleryBox>
     </ProjectWrapper>
   );
 };
@@ -141,42 +138,48 @@ const ProjectWrapper = styled.div`
   width: 100wv;
 `;
 
-// const Hexagon = styled.div`
-//   border-radius: 2px;
-//   background-color: whitesmoke;
-//   position: relative;
-//   width: 750px;
-//   height: 433.01px;
-//   background-color: #f5f5f5;
-//   margin: 0 0 0 40px;
-//   padding: 0px 80px 0px 80px;
-//   &:before,
-//   &:after {
-//     content: '';
-//     position: absolute;
-//     width: 0;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     border-left: 375px solid transparent;
-//     border-right: 375px solid transparent;
-//   }
+const Hexagon = styled(motion.div)`
+  border-radius: 2px;
+  background-color: whitesmoke;
+  position: relative;
+  width: 750px;
+  height: 433.01px;
+  background-color: #f5f5f5;
+  margin: 0 0 0 40px;
+  padding: 0px 80px 0px 80px;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 375px solid transparent;
+    border-right: 375px solid transparent;
+  }
 
-//   &:before {
-//     bottom: 100%;
-//     border-bottom: 216.51px solid #f5f5f5;
-//   }
+  &:before {
+    bottom: 100%;
+    border-bottom: 216.51px solid #f5f5f5;
+  }
 
-//   &:after {
-//     top: 100%;
-//     width: 0;
-//     border-top: 216.51px solid #f5f5f5;
-//   }
-// `;
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 216.51px solid #f5f5f5;
+  }
+`;
 
 const InfoContainer = styled.div`
   position: relative;
   flex: 1;
   margin-top: -75px;
+`;
+
+const TextBox = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const ProjectTitle = styled.h2`
@@ -271,6 +274,15 @@ const Button = styled.button`
     color: whitesmoke;
     cursor: pointer;
   }
+`;
+
+const GalleryBox = styled(motion.div)`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 `;
 
 export default ProjectPage;

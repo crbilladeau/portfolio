@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Wrapper } from '../styles/Wrapper';
 
 const Portfolio = () => {
   // hooks
@@ -22,8 +21,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
         >
           <Link to='/new-horizons-companion#project'>
-            <motion.div
-              className='container'
+            <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onMouseEnter={() => setHoverOne(true)}
@@ -37,7 +35,7 @@ const Portfolio = () => {
               {hover ? (
                 <ProjectTitle>New Horizons Companion App</ProjectTitle>
               ) : null}
-            </motion.div>
+            </Project>
           </Link>
         </div>
 
@@ -47,7 +45,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
         >
           <Link to='/movie-finder-app'>
-            <motion.div
+            <Project
               className='container'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -59,7 +57,7 @@ const Portfolio = () => {
                 alt='Placeholder Thumbnail'
               />
               {hoverTwo ? <ProjectTitle>Movie Finder App</ProjectTitle> : null}
-            </motion.div>
+            </Project>
           </Link>
         </div>
 
@@ -69,7 +67,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
         >
           <Link to='/dnd-app'>
-            <motion.div
+            <Project
               className='container'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -81,7 +79,7 @@ const Portfolio = () => {
                 alt='Placeholder App Thumbnail'
               />
               {hoverThree ? <ProjectTitle>DND App</ProjectTitle> : null}
-            </motion.div>
+            </Project>
           </Link>
         </div>
 
@@ -91,7 +89,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
         >
           <Link to='/travel-agency-landing'>
-            <motion.div
+            <Project
               className='container'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -105,7 +103,7 @@ const Portfolio = () => {
               {hoverFour ? (
                 <ProjectTitle>Travel Agency Landing Page</ProjectTitle>
               ) : null}
-            </motion.div>
+            </Project>
           </Link>
         </div>
 
@@ -115,7 +113,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
         >
           <Link to='/stream-app'>
-            <motion.div
+            <Project
               className='container'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -127,7 +125,7 @@ const Portfolio = () => {
                 alt='Stream App Thumbnail'
               />
               {hoverFive ? <ProjectTitle>Stream App</ProjectTitle> : null}
-            </motion.div>
+            </Project>
           </Link>
         </div>
 
@@ -137,7 +135,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
         >
           <Link to='/video-search-app'>
-            <motion.div
+            <Project
               className='container'
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -149,7 +147,7 @@ const Portfolio = () => {
                 alt='Video Search App Thumbnail'
               />
               {hoverSix ? <ProjectTitle>Video Search App</ProjectTitle> : null}
-            </motion.div>
+            </Project>
           </Link>
         </div>
       </PortfolioContainer>
@@ -157,10 +155,41 @@ const Portfolio = () => {
   );
 };
 
+const Wrapper = styled.div`
+  background: linear-gradient(165deg, #8ffaff 50%, #211a23 50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  padding-left: 30px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+  height: 100vh;
+  width: 100wv;
+`;
+
 const PortfolioContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const Project = styled(motion.div)`
+  border-radius: 3px;
+  background-color: whitesmoke;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  height: 250px;
+  width: 450px;
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.52);
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.52);
 `;
 
 const ProjectTitle = styled.h2`

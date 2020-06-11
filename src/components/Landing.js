@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
 import { HashLink as Link } from 'react-router-hash-link';
+import Particles from './ParticlesBackground';
 
 const Landing = () => {
   return (
@@ -63,6 +64,35 @@ const Landing = () => {
   );
 };
 
+const HeadlineBox = styled.div`
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+`;
+
+const Header = styled.header`
+  color: #8ffaff;
+  font-family: 'Crimson Pro', serif;
+  font-size: 80px;
+  text-transform: uppercase;
+  text-align: center;
+`;
+
+const SubHeader = styled.h2`
+  color: whitesmoke;
+  font-family: 'TypeCond', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+`;
+
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -82,34 +112,6 @@ const Button = styled.button`
     cursor: pointer;
     border: 2px solid magenta;
   }
-`;
-
-const HeadlineBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  margin-top: 35vh;
-  width: 100vw;
-`;
-
-const Header = styled.header`
-  color: #8ffaff;
-  font-family: 'Crimson Pro', serif;
-  font-size: 80px;
-  text-transform: uppercase;
-  text-align: center;
-`;
-
-const SubHeader = styled.h2`
-  color: whitesmoke;
-  font-family: 'TypeCond', sans-serif;
-  font-size: 40px;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  text-align: center;
 `;
 
 const navVariants = {

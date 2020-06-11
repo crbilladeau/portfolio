@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import { wrap } from '@popmotion/popcorn';
 
@@ -40,8 +40,7 @@ const GalleryChanger = ({ images }) => {
   return (
     <>
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
-          className='gallery-image'
+        <GalleryImage
           key={page}
           src={images[imageIndex]}
           custom={direction}
@@ -67,25 +66,50 @@ const GalleryChanger = ({ images }) => {
           }}
         />
       </AnimatePresence>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          height: '85vh',
-          marginTop: '60px',
-          justifyContent: 'space-between',
-        }}
-      >
-        <div className='next' onClick={() => paginate(-1)}>
+      <NextButtonContainer>
+        <NextButton className='next' onClick={() => paginate(-1)}>
           {'▲'}
-        </div>
-        <div className='prev' onClick={() => paginate(1)}>
+        </NextButton>
+        <NextButton className='prev' onClick={() => paginate(1)}>
           {'▼'}
-        </div>
-      </div>
+        </NextButton>
+      </NextButtonContainer>
     </>
   );
 };
+
+const GalleryImage = styled(motion.img)`
+  border-radius: 3px;
+  position: absolute;
+  max-height: 100vh;
+  max-width: 100vw;
+  margin-top: 40px;
+`;
+
+const NextButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  margin-top: 60px;
+  justify-content: space-between;
+`;
+
+const NextButton = styled(motion.div)`
+  position: relative;
+  background: whitesmoke;
+  color: #211a23;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+`;
 
 export default GalleryChanger;
 

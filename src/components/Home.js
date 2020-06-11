@@ -28,6 +28,7 @@ const Container = styled.div`
   /* height: 100vh; */
   width: 100vw;
   text-align: center;
+  overflow: hidden;
 `;
 
 export default Home;

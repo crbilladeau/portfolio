@@ -11,7 +11,7 @@ const About = () => {
         data-aos-easing='ease-in-cubic'
         data-aos-duration='1000'
       >
-        <div className='hexagon'>
+        <Hexagon>
           <AboutBox>
             <InfoTitle>Technological Skills</InfoTitle>
             <IconsContainer>
@@ -125,7 +125,7 @@ const About = () => {
               </SkillTitle>
             </LibraryContainer>
           </AboutBox>
-        </div>
+        </Hexagon>
       </div>
 
       <AboutBox>
@@ -196,6 +196,37 @@ const AboutBox = styled.div`
   flex: 1;
   position: relative;
   margin-top: -170px;
+`;
+
+const Hexagon = styled(motion.div)`
+  position: relative;
+  width: 750px;
+  height: 433.01px;
+  background-color: #f5f5f5;
+  margin: 216.51px 0;
+  padding: 60px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 375px solid transparent;
+    border-right: 375px solid transparent;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 216.51px solid whitesmoke;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 216.51px solid whitesmoke;
+  }
 `;
 
 const InfoTitle = styled.h2`
