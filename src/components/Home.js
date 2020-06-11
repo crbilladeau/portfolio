@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className='App'>
       <Landing />
-      <Particles />
+      {/* <Particles /> */}
       <Container>
         <Portfolio title='portfolio' subtitle={Portfolio} id='portfolio' />
         <About title='about' subtitle={About} id='about' />
