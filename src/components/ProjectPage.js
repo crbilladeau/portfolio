@@ -11,6 +11,7 @@ const ProjectPage = ({
   demoUrl,
   githubUrl,
   images,
+  desktop,
 }) => {
   const techList = tech.map((tech) => (
     <ListItems key={tech.toString()}>{tech}</ListItems>
@@ -74,7 +75,7 @@ const ProjectPage = ({
         variants={galleryVariants}
         transition={galleryTransition}
       >
-        <GalleryChanger images={images} />
+        <GalleryChanger images={images} desktop={desktop} />
       </GalleryBox>
     </ProjectWrapper>
   );
@@ -136,6 +137,7 @@ const ProjectWrapper = styled.div`
   position: relative;
   height: 100vh;
   width: 100wv;
+  overflow: hidden;
 `;
 
 const Hexagon = styled(motion.div)`
@@ -145,7 +147,7 @@ const Hexagon = styled(motion.div)`
   width: 750px;
   height: 433.01px;
   background-color: #f5f5f5;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 20px;
   padding: 0px 80px 0px 80px;
   &:before,
   &:after {

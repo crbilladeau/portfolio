@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import Home from './components/Home';
 import Navigation from './components/Navigation';
 import ProjectPage from './components/ProjectPage';
-import { acnhImages } from './assets/image-data';
+import { acnhImages, gofarImages } from './assets/image-data';
 
 const App = () => {
   AOS.init();
@@ -35,6 +35,7 @@ const App = () => {
               demoUrl={`https://expo.io/@cbilladeau/nh-companion`}
               githubUrl={`https://github.com/crbilladeau/new-horizons-companion`}
               images={acnhImages}
+              desktop={false}
             />
           )}
         />
@@ -50,6 +51,7 @@ const App = () => {
               demoUrl={`https://github.com`}
               githubUrl={`https://github.com`}
               images={['']}
+              desktop={true}
             />
           )}
         />
@@ -65,6 +67,7 @@ const App = () => {
               demoUrl={`https://github.com`}
               githubUrl={`https://github.com`}
               images={['']}
+              desktop={true}
             />
           )}
         />
@@ -94,7 +97,8 @@ const App = () => {
               ]}
               demoUrl={`https://crbilladeau.github.io/landing-page-example/`}
               githubUrl={`https://github.com/crbilladeau/landing-page-example`}
-              images={['']}
+              images={gofarImages}
+              desktop={true}
             />
           )}
         />
@@ -110,6 +114,7 @@ const App = () => {
               demoUrl={`stream placeholder`}
               githubUrl={`stream placeholder`}
               images={['']}
+              desktop={true}
             />
           )}
         />
@@ -138,6 +143,7 @@ const App = () => {
               demoUrl={`https://codesandbox.io/s/video-search-app-27b62`}
               githubUrl={`https://github.com/crbilladeau/video-search`}
               images={['']}
+              desktop={true}
             />
           )}
         />

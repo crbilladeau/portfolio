@@ -20,7 +20,7 @@ const Portfolio = () => {
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
         >
-          <Link to='/new-horizons-companion#project'>
+          <Link to='/new-horizons-companion'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

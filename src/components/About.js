@@ -16,8 +16,7 @@ const About = () => {
             <InfoTitle>Technological Skills</InfoTitle>
             <IconsContainer>
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '80px' }}
+                <BigIcon
                   src={require('../assets/images/javascript.png')}
                   alt='Javascript icon'
                 />
@@ -25,16 +24,14 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '80px' }}
+                <BigIcon
                   src={require('../assets/images/html.png')}
                   alt='HTML icon'
                 />
                 <SkillTitle>HTML</SkillTitle>
               </motion.div>
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '80px' }}
+                <BigIcon
                   src={require('../assets/images/css.png')}
                   alt='CSS icon'
                 />
@@ -42,8 +39,7 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '80px' }}
+                <BigIcon
                   src={require('../assets/images/react.png')}
                   alt='React icon'
                 />
@@ -51,7 +47,7 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
+                <SmallIcon
                   style={{
                     width: '68px',
                     marginBottom: '10px',
@@ -66,8 +62,7 @@ const About = () => {
             <InfoTitle>Tools</InfoTitle>
             <IconsContainer>
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '70px' }}
+                <SmallIcon
                   src={require('../assets/images/npm.png')}
                   alt='npm icon'
                 />
@@ -75,10 +70,7 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{
-                    width: '70px',
-                  }}
+                <SmallIcon
                   src={require('../assets/images/graphql.png')}
                   alt='GraphQL icon'
                 />
@@ -86,8 +78,7 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '70px' }}
+                <SmallIcon
                   src={require('../assets/images/apollo.png')}
                   alt='Apollo icon'
                 />
@@ -95,8 +86,7 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '70px' }}
+                <SmallIcon
                   src={require('../assets/images/nodejs.png')}
                   alt='Node.js icon'
                 />
@@ -104,8 +94,7 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <img
-                  style={{ width: '70px' }}
+                <SmallIcon
                   src={require('../assets/images/webpack.png')}
                   alt='Webpack icon'
                 />
@@ -179,6 +168,7 @@ const Bio = styled.p`
 `;
 
 const Link = styled.a`
+  color: whitesmoke;
   &:visited {
     color: whitesmoke;
   }
@@ -242,6 +232,14 @@ const IconsContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+`;
+
+const BigIcon = styled.img`
+  width: 80px;
+`;
+
+const SmallIcon = styled.img`
+  width: 70px;
 `;
 
 const SkillTitle = styled.h2`

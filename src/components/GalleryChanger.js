@@ -24,7 +24,7 @@ const variants = {
   },
 };
 
-const GalleryChanger = ({ images }) => {
+const GalleryChanger = ({ images, desktop }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
   // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
@@ -64,9 +64,10 @@ const GalleryChanger = ({ images }) => {
               paginate(-1);
             }
           }}
+          desktop={desktop}
         />
       </AnimatePresence>
-      <NextButtonContainer>
+      <NextButtonContainer desktop={desktop}>
         <NextButton className='next' onClick={() => paginate(-1)}>
           {'▲'}
         </NextButton>
@@ -82,22 +83,22 @@ const GalleryImage = styled(motion.img)`
   border-radius: 3px;
   position: absolute;
   max-height: 100vh;
-  max-width: 100vw;
+  max-width: ${(props) => (props.desktop ? '45vw' : '100vw')};
   margin-top: 40px;
 `;
 
 const NextButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 85vh;
-  margin-top: 60px;
+  height: ${(props) => (props.desktop ? '60vh' : '85vh')};
+  margin-top: 80px;
   justify-content: space-between;
 `;
 
 const NextButton = styled(motion.div)`
   position: relative;
   background: whitesmoke;
-  color: #211a23;
+  color: magenta;
   border-radius: 30px;
   width: 40px;
   height: 40px;

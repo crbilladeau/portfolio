@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -14,67 +13,25 @@ const Navigation = () => {
         variants={navVariants}
         transition={navTransition}
       >
-        <ScrollLink
-          activeClass='active'
-          to='landing'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <Link to='/' style={{ textDecoration: 'none' }}>
-            <NavLinkStyle>HOME</NavLinkStyle>
-          </Link>
-        </ScrollLink>
+        <Link to='/#home' className='navlink'>
+          HOME
+        </Link>
 
-        <ScrollLink
-          activeClass='active'
-          to='portfolio'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <Link to='/#portfolio' style={{ textDecoration: 'none' }}>
-            <NavLinkStyle>PORTFOLIO</NavLinkStyle>
-          </Link>
-        </ScrollLink>
+        <Link to='/#portfolio' className='navlink'>
+          PORTFOLIO
+        </Link>
 
-        <ScrollLink
-          activeClass='active'
-          to='about'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <Link to='/#about' style={{ textDecoration: 'none' }}>
-            <NavLinkStyle>ABOUT</NavLinkStyle>
-          </Link>
-        </ScrollLink>
+        <Link to='/#about' className='navlink'>
+          ABOUT
+        </Link>
 
-        <ScrollLink
-          activeClass='active'
-          to='contact'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-        >
-          <Link to='/#contact' style={{ textDecoration: 'none' }}>
-            <NavLinkStyle>CONTACT</NavLinkStyle>
-          </Link>
-        </ScrollLink>
-        <ScrollLink
-          activeClass='active'
-          to='resume'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={1000}
-        >
-          <NavLinkStyle>RESUME ↓</NavLinkStyle>
-        </ScrollLink>
+        <Link to='/#contact' className='navlink'>
+          CONTACT
+        </Link>
+
+        <a href='https://github.com' target='_blank' className='navlink'>
+          RESUME
+        </a>
       </motion.div>
     </NavBarStyle>
   );

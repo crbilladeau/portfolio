@@ -18,9 +18,33 @@
   src: url('./fonts/typewcond_regular.otf') format('opentype');
 }
 
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: Geo Sans, sans-serif;
   color: whitesmoke;
   background-color: #211a23;
   /* height: 100%; */
+}
+
+.navlink {
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+  color: magenta;
+  cursor: pointer;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1pt;
+  margin: 20px;
+  text-decoration: none;
+}
+.navlink:hover {
+  padding-bottom: 5px;
+  /* color: whitesmoke; */
+  cursor: pointer;
 }

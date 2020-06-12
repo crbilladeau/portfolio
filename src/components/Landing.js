@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Link as ScrollLink } from 'react-scroll';
 import { HashLink as Link } from 'react-router-hash-link';
-import Particles from './ParticlesBackground';
 
 const Landing = () => {
   return (
-    <div id='landing'>
+    <div id='home'>
       <HeadlineBox>
         <Header>Charlie Billadeau</Header>
         <SubHeader>Frontend Developer</SubHeader>
@@ -19,44 +17,19 @@ const Landing = () => {
           transition={navTransition}
         >
           <ButtonContainer>
-            <ScrollLink
-              activeClass='active'
-              to='portfolio'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <Link to='/#portfolio'>
-                <Button>PORTFOLIO</Button>
-              </Link>
-            </ScrollLink>
-            <ScrollLink
-              activeClass='active'
-              to='about'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <Link to='/#about'>
-                <Button>ABOUT</Button>
-              </Link>
-            </ScrollLink>
-            <ScrollLink
-              activeClass='active'
-              to='contact'
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <Link to='/#contact'>
-                <Button>CONTACT</Button>
-              </Link>
-            </ScrollLink>
+            <Link to='/#portfolio'>
+              <Button>PORTFOLIO</Button>
+            </Link>
 
-            <Button>RESUME ↓</Button>
+            <Link to='/#about'>
+              <Button>ABOUT</Button>
+            </Link>
+
+            <Link to='/#contact'>
+              <Button>CONTACT</Button>
+            </Link>
+
+            <Button>RESUME</Button>
           </ButtonContainer>
         </motion.div>
       </HeadlineBox>
