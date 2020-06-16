@@ -51,6 +51,7 @@ const ParticlesBackground = () => {
           },
         },
       }}
+      style={{ position: 'absolute', top: '0', zIndex: '-1' }}
     />
   );
 };

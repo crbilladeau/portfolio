@@ -7,7 +7,7 @@ const About = () => {
     <AboutWrapper id='about'>
       <div
         data-aos='zoom-in'
-        data-aos-offset='300'
+        data-aos-offset='200'
         data-aos-easing='ease-in-cubic'
         data-aos-duration='1000'
       >
@@ -47,12 +47,7 @@ const About = () => {
               </motion.div>
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <SmallIcon
-                  style={{
-                    width: '68px',
-                    marginBottom: '10px',
-                    marginTop: '2px',
-                  }}
+                <BigIcon
                   src={require('../assets/images/reactnative.png')}
                   alt='React Native icon'
                 />
@@ -102,9 +97,9 @@ const About = () => {
               </motion.div>
             </IconsContainer>
             <InfoTitle>
-              <img src={require('../assets/images/heart.png')} alt='heart' />
+              <Hearts src={require('../assets/images/heart.png')} alt='heart' />
               Libraries
-              <img src={require('../assets/images/heart.png')} alt='heart' />
+              <Hearts src={require('../assets/images/heart.png')} alt='heart' />
             </InfoTitle>
             <LibraryContainer>
               <SkillTitle>
@@ -117,33 +112,30 @@ const About = () => {
         </Hexagon>
       </div>
 
-      <AboutBox>
-        <div
-          data-aos='fade-left'
-          data-aos-offset='300'
-          data-aos-easing='ease-in-cubic'
-          data-aos-duration='1000'
-        >
-          <Bio>
-            I'm a Frontend Developer specializing in JavaScript and React
-            development for web & mobile. I care about thoughtful,
-            human-oriented design, and I build apps that are fast-loading,
-            responsive, and centered on user experience. As a life-long learner,
-            I'm always researching the next best practice or technology, from
-            React Hooks to the newest animation library.
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            After hours, I am a{' '}
-            <Link href='https://cbilladeaux.myportfolio.com/' target='_blank'>
-              photographer
-            </Link>
-            , educator, and avid TTRPG player.
-          </Bio>
-        </div>
-      </AboutBox>
+      <div
+        data-aos='fade-left'
+        data-aos-offset='200'
+        data-aos-easing='ease-in-cubic'
+        data-aos-duration='1000'
+      >
+        <Bio>
+          I'm a Frontend Developer specializing in JavaScript and React
+          development for web & mobile. I care about thoughtful, human-oriented
+          design, and I build apps that are fast-loading, responsive, and
+          centered on user experience. As a life-long learner, I'm always
+          researching the next best practice or technology, from React Hooks to
+          the newest animation library.
+          <br />
+          <br />
+          <br />
+          <br />
+          After hours, I am a{' '}
+          <Link href='https://cbilladeaux.myportfolio.com/' target='_blank'>
+            photographer
+          </Link>
+          , educator, and avid TTRPG player.
+        </Bio>
+      </div>
     </AboutWrapper>
   );
 };
@@ -152,19 +144,36 @@ const AboutWrapper = styled.div`
   background: linear-gradient(120deg, #8ffaff 50%, #211a23 50%);
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  padding: 10px 40px 10px 40px;
-  width: 100vw;
-  position: relative;
+  padding: 10px 20px 10px 20px;
+  width: 100%;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    background: linear-gradient(160deg, #8ffaff 50%, #211a23 50%);
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 `;
 
 const Bio = styled.p`
   font-family: 'Source Code Pro', monospace;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
-  padding: 20px 30px 20px 140px;
+  max-width: 600px;
+  text-align: center;
+  margin-right: -20px;
+  padding: 10px 40px;
+  @media screen and (max-width: 1440px) {
+    font-size: 16px;
+    max-width: 500px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 60px 40px;
+  }
 `;
 
 const Link = styled.a`
@@ -185,15 +194,21 @@ const Link = styled.a`
 const AboutBox = styled.div`
   flex: 1;
   position: relative;
-  margin-top: -170px;
+  margin-top: -160px;
+  @media screen and (max-width: 1440px) {
+    margin-top: -100px;
+  }
 `;
+
+const desktopHexWidth = 750;
+const mobileHexWidth = 500;
 
 const Hexagon = styled(motion.div)`
   position: relative;
-  width: 750px;
-  height: 433.01px;
+  width: ${desktopHexWidth}px;
+  height: calc(${desktopHexWidth}px / 1.732);
   background-color: #f5f5f5;
-  margin: 216.51px 0;
+  margin: calc(${desktopHexWidth}px / 3.464) 0;
   padding: 60px;
 
   &:before,
@@ -203,19 +218,36 @@ const Hexagon = styled(motion.div)`
     width: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-left: 375px solid transparent;
-    border-right: 375px solid transparent;
+    border-left: calc(${desktopHexWidth}px / 2) solid transparent;
+    border-right: calc(${desktopHexWidth}px / 2) solid transparent;
   }
 
   &:before {
     bottom: 100%;
-    border-bottom: 216.51px solid whitesmoke;
+    border-bottom: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
   }
 
   &:after {
     top: 100%;
     width: 0;
-    border-top: 216.51px solid whitesmoke;
+    border-top: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
+  }
+  @media screen and (max-width: 1440px) {
+    width: ${mobileHexWidth}px;
+    height: calc(${mobileHexWidth}px / 1.732);
+    margin: calc(${mobileHexWidth}px / 3.464) 0;
+    padding: 40px;
+    &:before,
+    &:after {
+      border-left: calc(${mobileHexWidth}px / 2) solid transparent;
+      border-right: calc(${mobileHexWidth}px / 2) solid transparent;
+    }
+    &:before {
+      border-bottom: calc(${mobileHexWidth}px / 3.464) solid whitesmoke;
+    }
+    &:after {
+      border-top: calc(${mobileHexWidth}px / 3.464) solid whitesmoke;
+    }
   }
 `;
 
@@ -225,6 +257,10 @@ const InfoTitle = styled.h2`
   font-size: 35px;
   text-transform: uppercase;
   padding: 15px 0 15px 0;
+  @media screen and (max-width: 1440px) {
+    font-size: 22px;
+    padding: 10px 0 10px 0;
+  }
 `;
 
 const IconsContainer = styled.div`
@@ -236,10 +272,16 @@ const IconsContainer = styled.div`
 
 const BigIcon = styled.img`
   width: 80px;
+  @media screen and (max-width: 1440px) {
+    width: 50px;
+  }
 `;
 
 const SmallIcon = styled.img`
   width: 70px;
+  @media screen and (max-width: 1440px) {
+    width: 40px;
+  }
 `;
 
 const SkillTitle = styled.h2`
@@ -247,6 +289,9 @@ const SkillTitle = styled.h2`
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;
   font-weight: 300;
+  @media screen and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 const LibraryContainer = styled.div`
@@ -254,6 +299,13 @@ const LibraryContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+`;
+
+const Hearts = styled.img`
+  width: 60px;
+  @media screen and (max-width: 1440px) {
+    width: 30px;
+  }
 `;
 
 export default About;

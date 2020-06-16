@@ -24,9 +24,10 @@ const Contact = () => {
       </div>
       <FormContainer
         data-aos='fade-up-right'
-        data-aos-offset='300'
+        data-aos-offset='100'
         data-aos-easing='ease-in-cubic'
         data-aos-duration='800'
+        id='contact'
       >
         <ContactForm />
         <IconContainer>
@@ -51,7 +52,7 @@ const Contact = () => {
             />
           </motion.div>
         </IconContainer>
-        <Email id='contact'>charlie.billadeau@gmail.com</Email>
+        <Email>charlie.billadeau@gmail.com</Email>
       </FormContainer>
     </ContactWrapper>
   );
@@ -92,16 +93,22 @@ const Title = styled.h2`
   font-family: Crimson Pro, sans-serif;
   font-size: 140px;
   font-weight: 200;
-  margin-top: 40px;
-  margin-left: 120px;
+  margin: 60px 0 0 120px;
   text-transform: uppercase;
   text-align: left;
+  @media screen and (max-width: 1024px) {
+    margin: 60px 0 0 80px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 100px;
+    margin: 60px 0 0 20px;
+  }
 `;
 
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 160px;
+  margin-top: 100px;
   width: 100%;
 `;
 
@@ -109,7 +116,6 @@ const IconContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 40px;
 `;
 
 const Icon = styled.img`

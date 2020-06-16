@@ -9,29 +9,27 @@ const Landing = () => {
       <HeadlineBox>
         <Header>Charlie Billadeau</Header>
         <SubHeader>Frontend Developer</SubHeader>
-        <motion.div
+        <ButtonContainer
           initial='out'
           animate='in'
           exit='out'
           variants={navVariants}
           transition={navTransition}
         >
-          <ButtonContainer>
-            <Link to='/#portfolio'>
-              <Button>PORTFOLIO</Button>
-            </Link>
+          <Link to='/#portfolio'>
+            <Button>PORTFOLIO</Button>
+          </Link>
 
-            <Link to='/#about'>
-              <Button>ABOUT</Button>
-            </Link>
+          <Link to='/#about'>
+            <Button>ABOUT</Button>
+          </Link>
 
-            <Link to='/#contact'>
-              <Button>CONTACT</Button>
-            </Link>
+          <Link to='/#contact'>
+            <Button>CONTACT</Button>
+          </Link>
 
-            <Button>RESUME</Button>
-          </ButtonContainer>
-        </motion.div>
+          <Button>RESUME</Button>
+        </ButtonContainer>
       </HeadlineBox>
     </div>
   );
@@ -43,7 +41,7 @@ const HeadlineBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
 `;
@@ -51,7 +49,8 @@ const HeadlineBox = styled.div`
 const Header = styled.header`
   color: #8ffaff;
   font-family: 'Crimson Pro', serif;
-  font-size: 80px;
+  font-size: 100px;
+  line-height: 100px;
   text-transform: uppercase;
   text-align: center;
 `;
@@ -66,9 +65,16 @@ const SubHeader = styled.h2`
   text-align: center;
 `;
 
-const ButtonContainer = styled.div`
+const ButtonContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Button = styled.button`
@@ -78,12 +84,15 @@ const Button = styled.button`
   color: #8ffaff;
   font-family: 'Source Code Pro', monospace;
   font-size: 24px;
-  margin: 0 1em;
+  margin: 0 0.5em;
   padding: 0.25em 1em;
   &:hover {
     color: magenta;
     cursor: pointer;
     border: 2px solid magenta;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0.3em 0;
   }
 `;
 

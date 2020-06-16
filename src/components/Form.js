@@ -3,16 +3,6 @@ import styled from 'styled-components';
 
 const ContactForm = () => {
   const [status, setStatus] = useState('');
-  // constructor(props) {
-  //   super(props);
-  //   this.submitForm = this.submitForm.bind(this);
-  //   this.state = {
-  //     status: '',
-  //   };
-  // }
-
-  // render() {
-  //   const { status } = this.state;
   const submitForm = (ev) => {
     ev.preventDefault();
     const form = ev.target;
@@ -33,34 +23,59 @@ const ContactForm = () => {
   };
 
   return (
-    <form
-      onSubmit={submitForm}
-      action='https://formspree.io/xknqbgwa'
-      method='POST'
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <InputLabel>Your Email:</InputLabel>
-      <Input type='email' name='email' />
-      <InputLabel>Message:</InputLabel>
-      <Input type='text' name='message' />
-      {status === 'SUCCESS' ? <p>Thanks!</p> : <Button>Submit</Button>}
-      {status === 'ERROR' && <p>Ooops! There was an error.</p>}
-    </form>
+    <>
+      <FormTitle>Send me a message directly!</FormTitle>
+      <form
+        onSubmit={submitForm}
+        action='https://formspree.io/xknqbgwa'
+        method='POST'
+        className='form'
+      >
+        <InputLabel>Your Email:</InputLabel>
+        <Input type='email' name='email' />
+        <InputLabel>Message:</InputLabel>
+        <Input type='text' name='message' />
+
+        {status === 'SUCCESS' ? (
+          <Message>Thanks!</Message>
+        ) : (
+          <Button>Submit</Button>
+        )}
+        {status === 'ERROR' && <Message>Ooops! There was an error.</Message>}
+      </form>
+    </>
   );
 };
 
 export default ContactForm;
 
-const InputLabel = styled.label`
+const FormTitle = styled.h2`
   color: #211a23;
   font-family: 'Source Code Pro', monospace;
-  font-size: 22px;
-  margin: 0px 10px 0px 20px;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 1em 0;
+  @media screen and (max-width: 1024px) {
+    margin: 1em 0 0 0;
+  }
+`;
+
+const InputLabel = styled.label`
+  color: #211a23;
+  font-family: 'TypeCond', sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin: 0 0.5em 0 1.5em;
+  @media screen and (max-width: 1024px) {
+    margin: 0.5em 0;
+  }
+`;
+
+const Message = styled.p`
+  color: #211a23;
+  font-family: 'Source Code Prop', monospace;
+  font-size: 20px;
+  margin: 0.25em 0.25em;
 `;
 
 const Input = styled.input`
@@ -80,11 +95,14 @@ const Button = styled.button`
   color: #ff00ff;
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;
-  margin: 5px 8px 5px 8px;
+  margin: 0 1.5em;
   padding: 8px;
   &:hover {
     background-color: magenta;
     color: whitesmoke;
     cursor: pointer;
+  }
+  @media screen and (max-width: 1024px) {
+    margin: 1em 0;
   }
 `;

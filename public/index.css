@@ -48,3 +48,15 @@ body {
   /* color: whitesmoke; */
   cursor: pointer;
 }
+
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .form {
+    flex-direction: column;
+  }
+}
