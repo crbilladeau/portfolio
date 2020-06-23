@@ -26,11 +26,6 @@ const variants = {
 
 const GalleryChanger = ({ images, desktop }) => {
   const [[page, direction], setPage] = useState([0, 0]);
-
-  // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
-  // then wrap that within 0-2 to find our image ID in the array below. By passing an
-  // absolute page index as the `motion` component's `key` prop, `AnimatePresence` will
-  // detect it as an entirely new image. So you can infinitely paginate as few as 1 images.
   const imageIndex = wrap(0, images.length, page);
 
   const paginate = (newDirection) => {
@@ -82,17 +77,29 @@ const GalleryChanger = ({ images, desktop }) => {
 const GalleryImage = styled(motion.img)`
   border-radius: 3px;
   position: absolute;
-  max-height: 100vh;
-  max-width: ${(props) => (props.desktop ? '45vw' : '100vw')};
-  margin-top: 40px;
+  max-height: 90vh;
+  max-width: 650px;
+  @media screen and (max-width: 1440px) {
+    max-height: 70vh;
+    max-width: 500px;
+  }
+  @media screen and (max-width: 1024px) {
+    max-height: 100vh;
+    max-width: 700px;
+  }
+  @media screen and (max-width: 768px) {
+    max-height: 100vh;
+  }
 `;
 
 const NextButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: ${(props) => (props.desktop ? '60vh' : '85vh')};
-  margin-top: 80px;
   justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    height: ${(props) => (props.desktop ? '45vh' : '85vh')};
+  }
 `;
 
 const NextButton = styled(motion.div)`

@@ -52,7 +52,7 @@ export default ContactForm;
 const FormTitle = styled.h2`
   color: #211a23;
   font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 300;
   margin: 1em 0;
   @media screen and (max-width: 1024px) {
@@ -67,7 +67,7 @@ const InputLabel = styled.label`
   text-transform: uppercase;
   margin: 0 0.5em 0 1.5em;
   @media screen and (max-width: 1024px) {
-    margin: 0.5em 0;
+    margin: 0.5em 0 0.5em 0;
   }
 `;
 
@@ -96,7 +96,7 @@ const Button = styled.button`
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;
   margin: 0 1.5em;
-  padding: 8px;
+  padding: 0.5em 2em;
   &:hover {
     background-color: magenta;
     color: whitesmoke;

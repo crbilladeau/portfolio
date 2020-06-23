@@ -1,60 +1,135 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Navigation = () => {
+  const [navOpen, setNavOpen] = useState(false);
   return (
-    <NavBarStyle>
-      <motion.div
+    <>
+      <Icon
+        src={require('../assets/images/hex.png')}
+        alt='hex nav icon'
+        onClick={() => setNavOpen(!navOpen)}
+        navOpen={navOpen}
+      />
+      <NavBar
+        navOpen={navOpen}
         initial='out'
         animate='in'
         exit='out'
         variants={navVariants}
         transition={navTransition}
       >
-        <Link to='/#home' className='navlink'>
-          HOME
-        </Link>
+        <NavContainer>
+          <CloseButton
+            src={require('../assets/images/close.png')}
+            alt='close button'
+            onClick={() => setNavOpen(!navOpen)}
+            navOpen={navOpen}
+          />
+          <LinkContainer>
+            <StyledLink to='/#home' onClick={() => setNavOpen(false)}>
+              HOME
+            </StyledLink>
 
-        <Link to='/#portfolio' className='navlink'>
-          PORTFOLIO
-        </Link>
+            <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
+              PORTFOLIO
+            </StyledLink>
 
-        <Link to='/#about' className='navlink'>
-          ABOUT
-        </Link>
+            <StyledLink to='/#about' onClick={() => setNavOpen(false)}>
+              ABOUT
+            </StyledLink>
 
-        <Link to='/#contact' className='navlink'>
-          CONTACT
-        </Link>
+            <StyledLink to='/#contact' onClick={() => setNavOpen(false)}>
+              CONTACT
+            </StyledLink>
 
-        <a href='https://github.com' target='_blank' className='navlink'>
-          RESUME
-        </a>
-      </motion.div>
-    </NavBarStyle>
+            <StyledALink
+              href='https://github.com'
+              target='_blank'
+              onClick={() => setNavOpen(false)}
+            >
+              RESUME
+            </StyledALink>
+          </LinkContainer>
+        </NavContainer>
+      </NavBar>
+    </>
   );
 };
 
-const NavBarStyle = styled.div`
+const NavBar = styled(motion.nav)`
   background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 100%;
-  margin-top: 30px;
-  overflow: hidden;
-  position: fixed;
   top: 0;
+  margin: 1em 1em;
   right: 0;
-  z-index: 20;
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  @media screen and (max-width: 768px) {
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+    transform: ${({ navOpen }) =>
+      navOpen ? 'translateX(0)' : 'translateX(-100%)'};
+    margin: 0;
+  }
 `;
 
-export const NavLinkStyle = styled.a`
+const Icon = styled.img`
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1.5em 0 0 2em;
+  width: 64px;
+  z-index: 50;
+  @media screen and (max-width: 768px) {
+    cursor: pointer;
+    margin: 1.5em 1.5em;
+  }
+  @media screen and (max-width: 425px) {
+    width: 50px;
+  }
+`;
+
+const CloseButton = styled.img`
+  align-self: flex-end;
+  margin: 1.5em 1.5em;
+  width: 64px;
+`;
+
+const NavContainer = styled.div`
+  display: flex;
+  z-index: 50;
+  @media screen and (min-width: 769px) {
+    img {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    padding: 0 0 0 3em;
+    width: 100%;
+  }
+`;
+
+const LinkContainer = styled.div`
+  display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 0 3em 0;
+  }
+`;
+
+const StyledLink = styled(Link)`
   background-color: transparent;
   border-bottom: 3px solid transparent;
-  color: #8ffaff;
+  color: magenta;
   cursor: pointer;
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;
@@ -62,11 +137,39 @@ export const NavLinkStyle = styled.a`
   letter-spacing: 1pt;
   margin: 20px;
   text-decoration: none;
-  &:hover {
-    padding-bottom: 5px;
-    color: magenta;
-    cursor: pointer;
-  }
+}
+&:hover {
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  font-size: 40px;
+  font-family: 'TypeCond', sans-serif;
+  margin: 0.5em 0.5em;
+}
+`;
+
+const StyledALink = styled.a`
+  background-color: transparent;
+  border-bottom: 3px solid transparent;
+  color: magenta;
+  cursor: pointer;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1pt;
+  margin: 20px;
+  text-decoration: none;
+}
+&:hover {
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  font-size: 40px;
+  font-family: 'TypeCond', sans-serif;
+  margin: 0.5em 0.5em;
+}
 `;
 
 const navVariants = {

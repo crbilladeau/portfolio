@@ -51,7 +51,8 @@ const About = () => {
                   src={require('../assets/images/reactnative.png')}
                   alt='React Native icon'
                 />
-                <SkillTitle>React Native</SkillTitle>
+                <SkillTitle>React</SkillTitle>
+                <SkillTitle>Native</SkillTitle>
               </motion.div>
             </IconsContainer>
             <InfoTitle>Tools</InfoTitle>
@@ -146,13 +147,11 @@ const AboutWrapper = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 10px 20px 10px 20px;
   width: 100%;
   overflow: hidden;
   @media screen and (max-width: 768px) {
     background: linear-gradient(160deg, #8ffaff 50%, #211a23 50%);
     flex-direction: column;
-    flex-wrap: wrap;
   }
 `;
 
@@ -170,9 +169,11 @@ const Bio = styled.p`
   }
   @media screen and (max-width: 1024px) {
     font-size: 14px;
+    margin: 0;
   }
   @media screen and (max-width: 768px) {
-    padding: 60px 40px;
+    font-size: 16px;
+    padding: 60px 20px;
   }
 `;
 
@@ -194,9 +195,15 @@ const Link = styled.a`
 const AboutBox = styled.div`
   flex: 1;
   position: relative;
-  margin-top: -160px;
+  margin-top: -120px;
   @media screen and (max-width: 1440px) {
     margin-top: -100px;
+  }
+  @media screen and (max-width: 425px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 
@@ -208,7 +215,7 @@ const Hexagon = styled(motion.div)`
   width: ${desktopHexWidth}px;
   height: calc(${desktopHexWidth}px / 1.732);
   background-color: #f5f5f5;
-  margin: calc(${desktopHexWidth}px / 3.464) 0;
+  margin: 250px 0;
   padding: 60px;
 
   &:before,
@@ -232,11 +239,11 @@ const Hexagon = styled(motion.div)`
     width: 0;
     border-top: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
   }
+
   @media screen and (max-width: 1440px) {
     width: ${mobileHexWidth}px;
     height: calc(${mobileHexWidth}px / 1.732);
-    margin: calc(${mobileHexWidth}px / 3.464) 0;
-    padding: 40px;
+    padding: 40px 60px;
     &:before,
     &:after {
       border-left: calc(${mobileHexWidth}px / 2) solid transparent;
@@ -249,31 +256,77 @@ const Hexagon = styled(motion.div)`
       border-top: calc(${mobileHexWidth}px / 3.464) solid whitesmoke;
     }
   }
+
+  @media screen and (max-width: 425px) {
+    width: ${desktopHexWidth}px;
+    height: ${desktopHexWidth}px;
+    margin: 300px 0 200px 0;
+    padding: 0;
+    &:before,
+    &:after {
+      border-left: calc(${desktopHexWidth}px / 2) solid transparent;
+      border-right: calc(${desktopHexWidth}px / 2) solid transparent;
+    }
+    &:before {
+      border-bottom: calc(${mobileHexWidth}px / 3) solid whitesmoke;
+    }
+    &:after {
+      border-top: calc(${mobileHexWidth}px / 3) solid whitesmoke;
+    }
+  }
 `;
 
 const InfoTitle = styled.h2`
   color: #211a23;
   font-family: 'TypeCond', sans-serif;
   font-size: 35px;
+  margin: 0.5em 0 0.2em 0;
   text-transform: uppercase;
-  padding: 15px 0 15px 0;
+  z-index: 20;
+  &:nth-child(3) {
+    margin: 0 0 0 0;
+  }
   @media screen and (max-width: 1440px) {
-    font-size: 22px;
-    padding: 10px 0 10px 0;
+    font-size: 28px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 38px;
+    margin: 0.5em 0 0 0;
+    &:nth-child(3) {
+      margin: 0.5em 0 0 0;
+    }
+    &:nth-child(5) {
+      margin: 0.8em 0 0 0;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    &:nth-child(1) {
+      margin: 0 12em;
+      line-height: 40px;
+    }
   }
 `;
 
 const IconsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
+  @media screen and (max-width: 425px) {
+    flex: 1;
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const BigIcon = styled.img`
   width: 80px;
   @media screen and (max-width: 1440px) {
     width: 50px;
+  }
+  @media screen and (max-width: 425px) {
+    margin: 1em 1em 0 1em;
+    width: 60px;
   }
 `;
 
@@ -282,6 +335,10 @@ const SmallIcon = styled.img`
   @media screen and (max-width: 1440px) {
     width: 40px;
   }
+  @media screen and (max-width: 425px) {
+    margin: 1em 1.5em 0 1.5em;
+    width: 50px;
+  }
 `;
 
 const SkillTitle = styled.h2`
@@ -289,8 +346,12 @@ const SkillTitle = styled.h2`
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;
   font-weight: 300;
+  z-index: 20;
   @media screen and (max-width: 1440px) {
-    font-size: 14px;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 18px;
   }
 `;
 
@@ -299,6 +360,12 @@ const LibraryContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  @media screen and (max-width: 425px) {
+    margin: 0 12em;
+  }
+  @media screen and (max-width: 320px) {
+    margin: 0 16em;
+  }
 `;
 
 const Hearts = styled.img`

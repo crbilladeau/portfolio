@@ -13,15 +13,15 @@ const Contact = () => {
       <SmallTriangle></SmallTriangle>
       <BigTriangle></BigTriangle>
 
-      <div
+      <Title
         data-aos='fade-in'
         data-aos-offset='300'
         data-aos-easing='ease-in-cubic'
         data-aos-duration='1000'
-        style={{ alignSelf: 'flex-start', width: '100%' }}
       >
-        <Title>contact</Title>
-      </div>
+        contact
+      </Title>
+
       <FormContainer
         data-aos='fade-up-right'
         data-aos-offset='100'
@@ -64,10 +64,10 @@ const ContactWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
   position: relative;
   height: 100vh;
   width: 100wv;
+  overflow: hidden;
 `;
 
 const BigTriangle = styled.div`
@@ -83,32 +83,41 @@ const BigTriangle = styled.div`
 const SmallTriangle = styled.div`
   position: absolute;
   border-left: 255px solid transparent;
-  border-right: 1280px solid transparent;
-  border-top: 455px solid whitesmoke;
+  border-right: 1400px solid transparent;
+  border-top: 275px solid whitesmoke;
   z-index: -1;
 `;
 
 const Title = styled.h2`
+  align-self: flex-start;
   color: #211a23;
   font-family: Crimson Pro, sans-serif;
-  font-size: 140px;
+  font-size: 130px;
   font-weight: 200;
-  margin: 60px 0 0 120px;
+  margin: 50px 0 0 120px;
   text-transform: uppercase;
   text-align: left;
+  width: 100%;
   @media screen and (max-width: 1024px) {
-    margin: 60px 0 0 80px;
+    margin: 60px 0 0 40px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 100px;
-    margin: 60px 0 0 20px;
+    font-size: 90px;
+    margin: 100px 0 0 40px;
+  }
+  @media screen and (max-width: 425px) {
+    text-align: center;
+    margin: 90px 0 0 0;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 70px;
   }
 `;
 
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   width: 100%;
 `;
 

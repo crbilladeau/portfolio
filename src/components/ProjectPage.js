@@ -61,6 +61,7 @@ const ProjectPage = ({
                 <List>{challengeList}</List>
               </ColumnBox>
             </RowBox>
+
             <InfoHeader>Technologies Used</InfoHeader>
             <LineBreak />
             <TechList>{techList}</TechList>
@@ -131,24 +132,35 @@ const ProjectWrapper = styled.div`
   background: linear-gradient(165deg, #211a23 50%, #8ffaff 50%);
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
-  height: 100vh;
   width: 100wv;
   overflow: hidden;
+  @media screen and (max-width: 1024px) {
+    flex-direction: ${(props) => (props.desktop ? 'row' : 'column')};
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
+
+const desktopHexWidth = 800;
+const halfDesktopHexWidth = 550;
+const mobileHexWidth = 500;
 
 const Hexagon = styled(motion.div)`
   border-radius: 2px;
   background-color: whitesmoke;
   position: relative;
-  width: 750px;
-  height: 433.01px;
   background-color: #f5f5f5;
-  margin: 0 0 0 20px;
-  padding: 0px 80px 0px 80px;
+  padding: 0px 40px;
+
+  width: ${desktopHexWidth}px;
+  height: calc(${desktopHexWidth}px / 1.732);
+  margin: 250px 0px calc(${desktopHexWidth}px / 3.464) 40px;
+
   &:before,
   &:after {
     content: '';
@@ -156,19 +168,59 @@ const Hexagon = styled(motion.div)`
     width: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-left: 375px solid transparent;
-    border-right: 375px solid transparent;
+    border-left: calc(${desktopHexWidth}px / 2) solid transparent;
+    border-right: calc(${desktopHexWidth}px / 2) solid transparent;
   }
 
   &:before {
     bottom: 100%;
-    border-bottom: 216.51px solid #f5f5f5;
+    border-bottom: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
   }
 
   &:after {
     top: 100%;
     width: 0;
-    border-top: 216.51px solid #f5f5f5;
+    border-top: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
+  }
+  @media screen and (max-width: 1440px) {
+    width: ${halfDesktopHexWidth}px;
+    height: calc(${halfDesktopHexWidth}px / 1.732);
+    margin: 250px 0px calc(${halfDesktopHexWidth}px / 3.464) 20px;
+    &:before,
+    &:after {
+      border-left: calc(${halfDesktopHexWidth}px / 2) solid transparent;
+      border-right: calc(${halfDesktopHexWidth}px / 2) solid transparent;
+    }
+    &:before {
+      border-bottom: calc(${halfDesktopHexWidth}px / 3.464) solid whitesmoke;
+    }
+    &:after {
+      border-top: calc(${halfDesktopHexWidth}px / 3.464) solid whitesmoke;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: ${desktopHexWidth}px;
+    height: calc(${desktopHexWidth}px / 1.732);
+    margin: 250px 0px calc(${desktopHexWidth}px / 3.464) 0px;
+    &:before,
+    &:after {
+      border-left: calc(${desktopHexWidth}px / 2) solid transparent;
+      border-right: calc(${desktopHexWidth}px / 2) solid transparent;
+    }
+    &:before {
+      border-bottom: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
+    }
+    &:after {
+      border-top: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
+    }
+  }
+  @media screen and (max-width: 768px) {
+  }
+
+  @media screen and (max-width: 425px) {
+    width: calc(${desktopHexWidth}px / 1.732);
+    height: ${desktopHexWidth}px;
   }
 `;
 
@@ -188,9 +240,23 @@ const ProjectTitle = styled.h2`
   color: #211a23;
   font-family: 'TypeCond', sans-serif;
   font-size: 35px;
+  margin: 0 10%;
+  line-height: 40px;
   text-transform: uppercase;
   text-align: center;
   padding: 8px;
+  @media screen and (max-width: 1440px) {
+    font-size: 28px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 35px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 35px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 40px;
+  }
 `;
 
 const InfoHeader = styled.h2`
@@ -200,17 +266,47 @@ const InfoHeader = styled.h2`
   font-weight: 400;
   padding: 10px;
   text-align: center;
+  z-index: 20;
+  @media screen and (max-width: 1440px) {
+    font-size: 22px;
+    padding: 5px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 24px;
+    padding: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    padding: 10px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 28px;
+    padding: 20px;
+  }
 `;
 
 const LineBreak = styled.hr`
   display: block;
   width: 100;
   border: 1.2px solid #ff00ff;
+  z-index: 20;
+  @media screen and (max-width: 768px) {
+    margin: 0 120px;
+  }
+  @media screen and (max-width: 425px) {
+    margin: 0 20px;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 0 40px;
+  }
 `;
 
 const RowBox = styled.div`
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ColumnBox = styled.div`
@@ -220,21 +316,18 @@ const ColumnBox = styled.div`
 `;
 
 const List = styled.ul`
-  margin: 8px 10px 8px 10px;
-  padding: 10px 10px 0px 10px;
+  padding: 1em 0.5em 0 0.5em;
   list-style: none;
 `;
 
 const ListItems = styled.li`
   color: #211a23;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   margin: 0;
-  padding-bottom: 4px;
-  padding-left: 15px;
-  padding-right: 10px;
+  padding-left: 5%;
   position: relative;
-
+  z-index: 20;
   &:after {
     content: '';
     height: 8px;
@@ -246,14 +339,53 @@ const ListItems = styled.li`
     top: 6px;
     left: 0;
   }
+  @media screen and (max-width: 1440px) {
+    font-size: 18px;
+    &:after {
+      height: 6px;
+      width: 6px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 22px;
+    &:after {
+      height: 8px;
+      width: 8px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    padding-left: 2%;
+    margin: 0% 20%;
+    &:after {
+      height: 6px;
+      width: 6px;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 22px;
+    margin: 0 5%;
+    padding-left: 4%;
+  }
+  @media screen and (max-width: 375px) {
+    margin: 0 12%;
+  }
 `;
 
 const TechList = styled.ul`
   display: flex;
   justify-content: space-around;
-  padding: 20px 0px;
+  padding: 1em 0;
   text-align: center;
   list-style: none;
+  li {
+    &:after {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ButtonBox = styled.div`
@@ -276,6 +408,14 @@ const Button = styled.button`
     color: whitesmoke;
     cursor: pointer;
   }
+  @media screen and (max-width: 1440px) {
+    font-size: 14px;
+    padding: 4px;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+    padding: 8px;
+  }
 `;
 
 const GalleryBox = styled(motion.div)`
@@ -283,8 +423,10 @@ const GalleryBox = styled(motion.div)`
   flex: 1;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  margin: 0 2em;
+  @media screen and (max-width: 1024px) {
+    margin: 3em 0;
+  }
 `;
 
 export default ProjectPage;

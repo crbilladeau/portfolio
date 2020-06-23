@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import acnh from '../assets/images/ACNH.png';
 import gofar from '../assets/images/go-far.PNG';
+import gofarmobile from '../assets/images/gofarmobile1.png';
 import videoApp from '../assets/images/video-search-thumbnail.png';
+import videosearchmobile from '../assets/images/videosearchmobile.png';
 import tbd from '../assets/images/placeholder.png';
 
 const Portfolio = () => {
@@ -23,8 +25,9 @@ const Portfolio = () => {
           data-aos='flip-left'
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
+          data-aos-offset='200'
         >
-          <Link to='/new-horizons-companion'>
+          <Link to='/new-horizons-companion#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -39,7 +42,7 @@ const Portfolio = () => {
           </Link>
         </ProjectContainer>
 
-        <ProjectContainer
+        {/* <ProjectContainer
           data-aos='flip-up'
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
@@ -55,8 +58,8 @@ const Portfolio = () => {
               {hoverTwo ? <ProjectTitle>Movie Finder App</ProjectTitle> : null}
             </Project>
           </Link>
-        </ProjectContainer>
-
+        </ProjectContainer> */}
+        {/* 
         <ProjectContainer
           data-aos='flip-right'
           data-aos-easing='ease-out-cubic'
@@ -73,14 +76,15 @@ const Portfolio = () => {
               {hoverThree ? <ProjectTitle>DND App</ProjectTitle> : null}
             </Project>
           </Link>
-        </ProjectContainer>
+        </ProjectContainer> */}
 
         <ProjectContainer
           data-aos='flip-left'
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
+          data-aos-offset='200'
         >
-          <Link to='/travel-agency-landing'>
+          <Link to='/travel-agency-landing#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -95,7 +99,7 @@ const Portfolio = () => {
           </Link>
         </ProjectContainer>
 
-        <ProjectContainer
+        {/* <ProjectContainer
           data-aos='flip-right'
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
@@ -111,14 +115,15 @@ const Portfolio = () => {
               {hoverFive ? <ProjectTitle>Stream App</ProjectTitle> : null}
             </Project>
           </Link>
-        </ProjectContainer>
+        </ProjectContainer> */}
 
         <ProjectContainer
           data-aos='flip-up'
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
+          data-aos-offset='200'
         >
-          <Link to='/video-search-app'>
+          <Link to='/video-search-app#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -142,7 +147,7 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
 `;
 
@@ -194,6 +199,14 @@ const Project = styled(motion.div)`
     height: 400px;
   }
   @media screen and (max-width: 425px) {
+    background-image: url(${(props) =>
+      props.acnh
+        ? acnh
+        : props.gofar
+        ? gofarmobile
+        : props.videoApp
+        ? videosearchmobile
+        : tbd});
     height: 400px;
   }
 `;

@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 const Landing = () => {
   return (
-    <div id='home'>
+    <div id='home' style={{ overflow: 'hidden' }}>
       <HeadlineBox>
         <Header>Charlie Billadeau</Header>
         <SubHeader>Frontend Developer</SubHeader>
@@ -50,9 +50,17 @@ const Header = styled.header`
   color: #8ffaff;
   font-family: 'Crimson Pro', serif;
   font-size: 100px;
-  line-height: 100px;
+  line-height: 90px;
   text-transform: uppercase;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 80px;
+    line-height: 70px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 60px;
+    line-height: 50px;
+  }
 `;
 
 const SubHeader = styled.h2`
@@ -60,8 +68,9 @@ const SubHeader = styled.h2`
   font-family: 'TypeCond', sans-serif;
   font-size: 40px;
   font-weight: 300;
+  line-height: 40px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin: 20px 0;
   text-align: center;
 `;
 
@@ -69,11 +78,12 @@ const ButtonContainer = styled(motion.div)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 10px 0;
   justify-content: center;
   align-items: center;
   width: 100%;
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    display: none;
   }
 `;
 

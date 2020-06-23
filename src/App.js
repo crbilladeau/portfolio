@@ -5,7 +5,11 @@ import 'aos/dist/aos.css';
 import Home from './components/Home';
 import Navigation from './components/Navigation';
 import ProjectPage from './components/ProjectPage';
-import { acnhImages, gofarImages } from './assets/image-data';
+import {
+  acnhImages,
+  gofarImages,
+  videoSearchImages,
+} from './assets/image-data';
 
 const App = () => {
   AOS.init();
@@ -81,7 +85,6 @@ const App = () => {
                 'Build a professional company landing page from scratch',
                 'Code fluid animations, smooth parallax scrolling, and responsive design using HTML, CSS, and JavaScript',
                 'Utilize Materialize CSS for the CSS framework',
-                '*Bonus*: All images on this demo site are my own photography',
               ]}
               challenges={[
                 'Learning how to implement Materialize CSS for styling',
@@ -142,7 +145,7 @@ const App = () => {
               ]}
               demoUrl={`https://codesandbox.io/s/video-search-app-27b62`}
               githubUrl={`https://github.com/crbilladeau/video-search`}
-              images={['']}
+              images={videoSearchImages}
               desktop={true}
             />
           )}
