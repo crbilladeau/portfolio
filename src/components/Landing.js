@@ -16,15 +16,15 @@ const Landing = () => {
           variants={navVariants}
           transition={navTransition}
         >
-          <Link to='/#portfolio'>
+          <Link to='/portfolio/#portfolio'>
             <Button>PORTFOLIO</Button>
           </Link>
 
-          <Link to='/#about'>
+          <Link to='/portfolio/#about'>
             <Button>ABOUT</Button>
           </Link>
 
-          <Link to='/#contact'>
+          <Link to='/portfolio/#contact'>
             <Button>CONTACT</Button>
           </Link>
 

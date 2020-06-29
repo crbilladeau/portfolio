@@ -29,7 +29,7 @@ const Navigation = () => {
             navOpen={navOpen}
           />
           <LinkContainer>
-            <StyledLink to='/portfolio/#home' onClick={() => setNavOpen(false)}>
+            <StyledLink to='/portfolio' onClick={() => setNavOpen(false)}>
               HOME
             </StyledLink>
 
@@ -40,7 +40,10 @@ const Navigation = () => {
               PORTFOLIO
             </StyledLink>
 
-            <StyledLink to='portfolio/#about' onClick={() => setNavOpen(false)}>
+            <StyledLink
+              to='/portfolio/#about'
+              onClick={() => setNavOpen(false)}
+            >
               ABOUT
             </StyledLink>
 
