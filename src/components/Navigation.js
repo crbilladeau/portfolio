@@ -29,19 +29,25 @@ const Navigation = () => {
             navOpen={navOpen}
           />
           <LinkContainer>
-            <StyledLink to='/#home' onClick={() => setNavOpen(false)}>
+            <StyledLink to='/portfolio/#home' onClick={() => setNavOpen(false)}>
               HOME
             </StyledLink>
 
-            <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
+            <StyledLink
+              to='/portfolio/#portfolio'
+              onClick={() => setNavOpen(false)}
+            >
               PORTFOLIO
             </StyledLink>
 
-            <StyledLink to='/#about' onClick={() => setNavOpen(false)}>
+            <StyledLink to='portfolio/#about' onClick={() => setNavOpen(false)}>
               ABOUT
             </StyledLink>
 
-            <StyledLink to='/#contact' onClick={() => setNavOpen(false)}>
+            <StyledLink
+              to='/portfolio/#contact'
+              onClick={() => setNavOpen(false)}
+            >
               CONTACT
             </StyledLink>
 
