@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9565bf0c7bb00d2c7691c0bebb8aa9bb",
+    "revision": "d176fc2a67afc28d05c0f2da68e99d8d",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "3c4005fb394380310b07",
+    "revision": "775a3201bb3972727c5d",
     "url": "/portfolio/static/css/2.8f2eca68.chunk.css"
   },
   {
-    "revision": "3c4005fb394380310b07",
-    "url": "/portfolio/static/js/2.53ccb52e.chunk.js"
+    "revision": "775a3201bb3972727c5d",
+    "url": "/portfolio/static/js/2.75d7dc5c.chunk.js"
   },
   {
     "revision": "da42135372d3365a7233548ad1382c4d",
-    "url": "/portfolio/static/js/2.53ccb52e.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.75d7dc5c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a97cd51b1ddb46e2720f",
-    "url": "/portfolio/static/js/main.0852b631.chunk.js"
+    "revision": "f673ca4202682be13d0e",
+    "url": "/portfolio/static/js/main.f4d74d05.chunk.js"
   },
   {
     "revision": "e5284505c87d0b24b753",
@@ -64,6 +64,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/go-far.714f81af.PNG"
   },
   {
+    "revision": "042faae779991057c36a96ebddc7b133",
+    "url": "/portfolio/static/media/gofar1.042faae7.jpg"
+  },
+  {
+    "revision": "f90d9b16f78c63cd01882afdd8127f5e",
+    "url": "/portfolio/static/media/gofar2.f90d9b16.jpg"
+  },
+  {
+    "revision": "56dfc374a9b2f2dba9df6decf31a9a6a",
+    "url": "/portfolio/static/media/gofar3.56dfc374.jpg"
+  },
+  {
+    "revision": "bc7377a9881563c4386bd872ff85200e",
+    "url": "/portfolio/static/media/gofarmobile1.bc7377a9.png"
+  },
+  {
     "revision": "801b898d02e17d05f509ba18cdc5bfd2",
     "url": "/portfolio/static/media/graphql.801b898d.png"
   },
@@ -90,6 +106,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1778bf89f75a211cc4f7e9142de626ee",
     "url": "/portfolio/static/media/video-search-thumbnail.1778bf89.png"
+  },
+  {
+    "revision": "c0dad5dbe1468486a2c5d336372f4a5e",
+    "url": "/portfolio/static/media/videosearch1.c0dad5db.jpg"
+  },
+  {
+    "revision": "fe3e9658399781eab742ac4f113d9533",
+    "url": "/portfolio/static/media/videosearchmobile.fe3e9658.png"
   },
   {
     "revision": "d44248d467d11331556e5a135c52a3e1",
