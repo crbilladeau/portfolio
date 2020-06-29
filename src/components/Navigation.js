@@ -34,7 +34,7 @@ const Navigation = () => {
             navOpen={navOpen}
           />
           <LinkContainer>
-            <StyledLink to='/portfolio' onClick={scrollTop}>
+            <StyledLink to='/portfolio/' onClick={scrollTop}>
               HOME
             </StyledLink>
 

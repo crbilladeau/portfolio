@@ -17,7 +17,7 @@ const App = () => {
     <div>
       <Navigation />
       <Switch>
-        <Route exact path='/portfolio' component={Home} />
+        <Route exact path='/portfolio/' component={Home} />
         <Route
           path='/new-horizons-companion'
           component={() => (
