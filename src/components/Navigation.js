@@ -5,6 +5,11 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 const Navigation = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <Icon
@@ -29,7 +34,7 @@ const Navigation = () => {
             navOpen={navOpen}
           />
           <LinkContainer>
-            <StyledLink to='/portfolio' onClick={() => setNavOpen(false)}>
+            <StyledLink to='/portfolio' onClick={scrollTop}>
               HOME
             </StyledLink>
 
