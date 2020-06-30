@@ -162,18 +162,16 @@ const StyledLink = styled(Link)`
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1pt;
-  margin: 20px;
+  margin: 1em;
   text-decoration: none;
-}
-&:hover {
-  padding-bottom: 5px;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  font-size: 40px;
-  font-family: 'TypeCond', sans-serif;
-  margin: 0.5em 0.5em;
-}
+  &:hover {
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    font-family: 'TypeCond', sans-serif;
+    margin: 0.5em;
+  }
 `;
 
 const StyledALink = styled.a`
@@ -187,16 +185,15 @@ const StyledALink = styled.a`
   letter-spacing: 1pt;
   margin: 20px;
   text-decoration: none;
-}
-&:hover {
-  padding-bottom: 5px;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  font-size: 40px;
-  font-family: 'TypeCond', sans-serif;
-  margin: 0.5em 0.5em;
-}
+  &:hover {
+    padding-bottom: 5px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
+    font-family: 'TypeCond', sans-serif;
+    margin: 0.5em 0.5em;
+  }
 `;
 
 const navVariants = {
