@@ -48,7 +48,7 @@ const HeadlineBox = styled.div`
 
 const Header = styled.header`
   color: #8ffaff;
-  font-family: 'Crimson Pro', serif;
+  font-family: 'Crimson Pro Italic', serif;
   font-size: 100px;
   line-height: 90px;
   text-transform: uppercase;

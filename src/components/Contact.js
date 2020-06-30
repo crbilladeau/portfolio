@@ -91,7 +91,7 @@ const SmallTriangle = styled.div`
 const Title = styled.h2`
   align-self: flex-start;
   color: #211a23;
-  font-family: Crimson Pro, sans-serif;
+  font-family: 'Crimson Pro Semi', serif;
   font-size: 130px;
   font-weight: 200;
   margin: 50px 0 0 120px;
