@@ -10,6 +10,7 @@ const Contact = () => {
 
   return (
     <ContactWrapper>
+      <Header id='contact'></Header>
       <SmallTriangle></SmallTriangle>
       <BigTriangle></BigTriangle>
 
@@ -27,7 +28,6 @@ const Contact = () => {
         data-aos-offset='100'
         data-aos-easing='ease-in-cubic'
         data-aos-duration='800'
-        id='contact'
       >
         <ContactForm />
         <IconContainer>
@@ -70,6 +70,17 @@ const ContactWrapper = styled.div`
   overflow: hidden;
 `;
 
+const Header = styled.h2`
+  :before {
+    display: block;
+    content: ' ';
+    margin-top: -285px;
+    height: 285px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+`;
+
 const BigTriangle = styled.div`
   position: absolute;
   height: 100%;
@@ -94,20 +105,20 @@ const Title = styled.h2`
   font-family: 'Crimson Pro Semi', serif;
   font-size: 130px;
   font-weight: 200;
-  margin: 50px 0 0 120px;
+  margin: -100px 0 0 120px;
   text-transform: uppercase;
   text-align: left;
   width: 100%;
   @media screen and (max-width: 1024px) {
-    margin: 60px 0 0 40px;
+    margin: 0px 0 0 40px;
   }
   @media screen and (max-width: 768px) {
     font-size: 90px;
-    margin: 100px 0 0 40px;
+    margin: 0px 0 0 40px;
   }
   @media screen and (max-width: 425px) {
     text-align: center;
-    margin: 90px 0 0 0;
+    margin: 60px 0px 0px 0px;
   }
   @media screen and (max-width: 425px) {
     font-size: 70px;

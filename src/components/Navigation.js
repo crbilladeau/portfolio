@@ -6,10 +6,10 @@ import { HashLink as Link } from 'react-router-hash-link';
 const Navigation = () => {
   const [navOpen, setNavOpen] = useState(false);
 
-  const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setNavOpen(!navOpen);
-  };
+  // const scrollTop = () => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  //   setNavOpen(!navOpen);
+  // };
 
   const useLockBodyScroll = () => {
     useLayoutEffect(() => {
@@ -30,9 +30,7 @@ const Navigation = () => {
           navOpen={navOpen}
         />
         <LinkContainer>
-          <StyledLink to='/' onClick={scrollTop}>
-            HOME
-          </StyledLink>
+          <StyledLink to='/'>HOME</StyledLink>
 
           <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
             PORTFOLIO
@@ -85,9 +83,7 @@ const Navigation = () => {
               navOpen={navOpen}
             />
             <LinkContainer>
-              <StyledLink to='/' onClick={scrollTop}>
-                HOME
-              </StyledLink>
+              <StyledLink to='/#home'>HOME</StyledLink>
 
               <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
                 PORTFOLIO
