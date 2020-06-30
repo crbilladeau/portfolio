@@ -19,7 +19,7 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route
-          path='/portfolio/new-horizons-companion'
+          path='/new-horizons-companion'
           component={() => (
             <ProjectPage
               title={`New Horizons Companion`}
