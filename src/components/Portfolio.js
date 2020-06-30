@@ -27,7 +27,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
           data-aos-offset='200'
         >
-          <Link to='/new-horizons-companion#project'>
+          <Link to='/portfolio/new-horizons-companion#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -84,7 +84,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
           data-aos-offset='200'
         >
-          <Link to='/travel-agency-landing#project'>
+          <Link to='/portfolio/travel-agency-landing#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -123,7 +123,7 @@ const Portfolio = () => {
           data-aos-duration='1000'
           data-aos-offset='200'
         >
-          <Link to='/video-search-app#project'>
+          <Link to='/portfolio/video-search-app#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

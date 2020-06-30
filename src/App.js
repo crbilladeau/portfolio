@@ -19,7 +19,7 @@ const App = () => {
       <Switch>
         <Route exact path='/portfolio/' component={Home} />
         <Route
-          path='/new-horizons-companion'
+          path='/portfolio/new-horizons-companion'
           component={() => (
             <ProjectPage
               title={`New Horizons Companion`}
@@ -43,9 +43,9 @@ const App = () => {
             />
           )}
         />
-
+        {/* 
         <Route
-          path='/movie-finder-app'
+          path='/portfolio/movie-finder-app'
           component={() => (
             <ProjectPage
               title={`Movie Finder App`}
@@ -58,10 +58,10 @@ const App = () => {
               desktop={true}
             />
           )}
-        />
+        /> */}
 
-        <Route
-          path='/dnd-app'
+        {/* <Route
+          path='/portfolio/dnd-app'
           component={() => (
             <ProjectPage
               title={`DND App`}
@@ -74,10 +74,10 @@ const App = () => {
               desktop={true}
             />
           )}
-        />
+        /> */}
 
         <Route
-          path='/travel-agency-landing'
+          path='/portfolio/travel-agency-landing'
           component={() => (
             <ProjectPage
               title={`Travel Agency Landing Page`}
@@ -105,9 +105,9 @@ const App = () => {
             />
           )}
         />
-
+        {/* 
         <Route
-          path='/stream-app'
+          path='/portfolio/stream-app'
           component={() => (
             <ProjectPage
               title={`Stream App`}
@@ -120,10 +120,10 @@ const App = () => {
               desktop={true}
             />
           )}
-        />
+        /> */}
 
         <Route
-          path='/video-search-app'
+          path='/portfolio/video-search-app'
           component={() => (
             <ProjectPage
               title={`Video Search App`}
