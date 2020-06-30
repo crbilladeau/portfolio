@@ -19,7 +19,7 @@ const Navigation = () => {
     }, []);
   };
 
-  const NavMenu = () => {
+  const MobilNavMenu = () => {
     useLockBodyScroll();
     return (
       <NavContainer>
@@ -74,7 +74,43 @@ const Navigation = () => {
         variants={navVariants}
         transition={navTransition}
       >
-        {navOpen ? <NavMenu /> : null}
+        {navOpen ? (
+          <MobilNavMenu />
+        ) : (
+          <NavContainer>
+            <CloseButton
+              src={require('../assets/images/close.png')}
+              alt='close button'
+              onClick={() => setNavOpen(!navOpen)}
+              navOpen={navOpen}
+            />
+            <LinkContainer>
+              <StyledLink to='/' onClick={scrollTop}>
+                HOME
+              </StyledLink>
+
+              <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
+                PORTFOLIO
+              </StyledLink>
+
+              <StyledLink to='/#about' onClick={() => setNavOpen(false)}>
+                ABOUT
+              </StyledLink>
+
+              <StyledLink to='/#contact' onClick={() => setNavOpen(false)}>
+                CONTACT
+              </StyledLink>
+
+              <StyledALink
+                href='https://github.com'
+                target='_blank'
+                onClick={() => setNavOpen(false)}
+              >
+                RESUME
+              </StyledALink>
+            </LinkContainer>
+          </NavContainer>
+        )}
       </NavBar>
     </>
   );
