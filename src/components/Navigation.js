@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -9,6 +9,59 @@ const Navigation = () => {
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setNavOpen(!navOpen);
+  };
+
+  const useLockBodyScroll = () => {
+    useLayoutEffect(() => {
+      const originalStyle = window.getComputedStyle(document.body).overflow;
+      document.body.style.overflow = 'hidden';
+      return () => (document.body.style.overflow = originalStyle);
+    }, []);
+  };
+
+  const NavMenu = () => {
+    useLockBodyScroll();
+    return (
+      <NavContainer>
+        <CloseButton
+          src={require('../assets/images/close.png')}
+          alt='close button'
+          onClick={() => setNavOpen(!navOpen)}
+          navOpen={navOpen}
+        />
+        <LinkContainer>
+          <StyledLink to='/portfolio/' onClick={scrollTop}>
+            HOME
+          </StyledLink>
+
+          <StyledLink
+            to='/portfolio/#portfolio'
+            onClick={() => setNavOpen(false)}
+          >
+            PORTFOLIO
+          </StyledLink>
+
+          <StyledLink to='/portfolio/#about' onClick={() => setNavOpen(false)}>
+            ABOUT
+          </StyledLink>
+
+          <StyledLink
+            to='/portfolio/#contact'
+            onClick={() => setNavOpen(false)}
+          >
+            CONTACT
+          </StyledLink>
+
+          <StyledALink
+            href='https://github.com'
+            target='_blank'
+            onClick={() => setNavOpen(false)}
+          >
+            RESUME
+          </StyledALink>
+        </LinkContainer>
+      </NavContainer>
+    );
   };
 
   return (
@@ -27,48 +80,7 @@ const Navigation = () => {
         variants={navVariants}
         transition={navTransition}
       >
-        <NavContainer>
-          <CloseButton
-            src={require('../assets/images/close.png')}
-            alt='close button'
-            onClick={() => setNavOpen(!navOpen)}
-            navOpen={navOpen}
-          />
-          <LinkContainer>
-            <StyledLink to='/portfolio/' onClick={scrollTop}>
-              HOME
-            </StyledLink>
-
-            <StyledLink
-              to='/portfolio/#portfolio'
-              onClick={() => setNavOpen(false)}
-            >
-              PORTFOLIO
-            </StyledLink>
-
-            <StyledLink
-              to='/portfolio/#about'
-              onClick={() => setNavOpen(false)}
-            >
-              ABOUT
-            </StyledLink>
-
-            <StyledLink
-              to='/portfolio/#contact'
-              onClick={() => setNavOpen(false)}
-            >
-              CONTACT
-            </StyledLink>
-
-            <StyledALink
-              href='https://github.com'
-              target='_blank'
-              onClick={() => setNavOpen(false)}
-            >
-              RESUME
-            </StyledALink>
-          </LinkContainer>
-        </NavContainer>
+        {navOpen ? <NavMenu /> : null}
       </NavBar>
     </>
   );

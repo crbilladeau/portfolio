@@ -375,10 +375,10 @@ const ListItems = styled.li`
 const TechList = styled.ul`
   display: flex;
   justify-content: space-around;
-  padding: 1em 0;
   text-align: center;
   list-style: none;
   li {
+    padding: 1em 0;
     &:after {
       display: none;
     }
