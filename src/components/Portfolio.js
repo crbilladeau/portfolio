@@ -214,7 +214,7 @@ const Project = styled(motion.div)`
 const ProjectTitle = styled.h2`
   background-color: whitesmoke;
   color: #211a23;
-  font-family: Crimson Pro, serif;
+  font-family: 'Crimson Pro Italic', serif;
   font-size: 30px;
   font-weight: 200;
   padding: 10px;

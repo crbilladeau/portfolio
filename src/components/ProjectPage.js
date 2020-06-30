@@ -261,7 +261,7 @@ const ProjectTitle = styled.h2`
 
 const InfoHeader = styled.h2`
   color: #211a23;
-  font-family: Crimson Pro, serif;
+  font-family: 'Crimson Pro Italic', serif;
   font-size: 24px;
   font-weight: 400;
   padding: 10px;
