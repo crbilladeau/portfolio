@@ -8,6 +8,7 @@ const Navigation = () => {
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    setNavOpen(!navOpen);
   };
 
   return (
