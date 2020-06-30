@@ -18,6 +18,20 @@
   src: url('./fonts/typewcond_regular.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Crimson Pro Italic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/Crimson-Italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Crimson Pro Semi';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/Crimson-SemiboldItalic.otf') format('opentype');
+}
+
 html {
   max-width: 100%;
   scroll-behavior: smooth;
