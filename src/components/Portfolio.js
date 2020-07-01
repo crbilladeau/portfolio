@@ -150,6 +150,9 @@ const Wrapper = styled.div`
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  @media screen and (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const PortfolioContainer = styled.div`
@@ -197,9 +200,6 @@ const Project = styled(motion.div)`
   @media screen and (max-width: 1440px) {
   }
   @media screen and (max-width: 768px) {
-    height: 400px;
-  }
-  @media screen and (max-width: 425px) {
     background-image: url(${(props) =>
       props.acnh
         ? acnh
