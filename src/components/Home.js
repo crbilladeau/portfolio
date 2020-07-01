@@ -14,7 +14,7 @@ const Home = () => {
       <Container>
         <Portfolio title='portfolio' subtitle={Portfolio} id='portfolio' />
         <About title='about' subtitle={About} id='about' />
-        <Contact title='contact' subtitle={Contact} id='contact' />
+        {/* <Contact title='contact' subtitle={Contact} id='contact' /> */}
       </Container>
     </div>
   );
