@@ -11,6 +11,7 @@ const ProjectPage = ({
   demoUrl,
   githubUrl,
   images,
+  mobileImages,
   desktop,
 }) => {
   const techList = tech.map((tech) => (
@@ -76,7 +77,11 @@ const ProjectPage = ({
         variants={galleryVariants}
         transition={galleryTransition}
       >
-        <GalleryChanger images={images} desktop={desktop} />
+        <GalleryChanger
+          images={images}
+          desktop={desktop}
+          mobileImages={mobileImages}
+        />
       </GalleryBox>
     </ProjectWrapper>
   );
@@ -185,7 +190,7 @@ const Hexagon = styled(motion.div)`
   @media screen and (max-width: 1440px) {
     width: ${halfDesktopHexWidth}px;
     height: calc(${halfDesktopHexWidth}px / 1.732);
-    margin: 250px 0px calc(${halfDesktopHexWidth}px / 3.464) 20px;
+    margin: 250px 0px calc(${halfDesktopHexWidth}px / 3.464) 40px;
     &:before,
     &:after {
       border-left: calc(${halfDesktopHexWidth}px / 2) solid transparent;
@@ -202,7 +207,7 @@ const Hexagon = styled(motion.div)`
   @media screen and (max-width: 1024px) {
     width: ${desktopHexWidth}px;
     height: calc(${desktopHexWidth}px / 1.732);
-    margin: 250px 0px calc(${desktopHexWidth}px / 3.464) 0px;
+    margin: 300px 0px calc(${desktopHexWidth}px / 3.464) 0px;
     &:before,
     &:after {
       border-left: calc(${desktopHexWidth}px / 2) solid transparent;
@@ -216,18 +221,24 @@ const Hexagon = styled(motion.div)`
     }
   }
   @media screen and (max-width: 768px) {
+    height: ${desktopHexWidth}px;
   }
 
   @media screen and (max-width: 425px) {
     width: calc(${desktopHexWidth}px / 1.732);
-    height: ${desktopHexWidth}px;
   }
 `;
 
 const InfoContainer = styled.div`
   position: relative;
   flex: 1;
-  margin-top: -75px;
+  margin-top: -60px;
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
+  @media screen and (max-width: 425px) {
+    margin-top: -75px;
+  }
 `;
 
 const TextBox = styled(motion.div)`
@@ -281,7 +292,7 @@ const InfoHeader = styled.h2`
   }
   @media screen and (max-width: 425px) {
     font-size: 28px;
-    padding: 20px;
+    padding: 10px;
   }
 `;
 
@@ -290,6 +301,9 @@ const LineBreak = styled.hr`
   width: 100;
   border: 1.2px solid #ff00ff;
   z-index: 20;
+  @media screen and (max-width: 1440px) {
+    margin: 0 40px;
+  }
   @media screen and (max-width: 768px) {
     margin: 0 120px;
   }
@@ -325,7 +339,7 @@ const ListItems = styled.li`
   font-size: 20px;
   font-weight: 400;
   margin: 0;
-  padding-left: 5%;
+  padding: 0em 0em 0.5em 1em;
   position: relative;
   z-index: 20;
   &:after {
@@ -340,7 +354,7 @@ const ListItems = styled.li`
     left: 0;
   }
   @media screen and (max-width: 1440px) {
-    font-size: 18px;
+    font-size: 16px;
     &:after {
       height: 6px;
       width: 6px;
@@ -374,9 +388,10 @@ const ListItems = styled.li`
 
 const TechList = styled.ul`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   text-align: center;
   list-style: none;
+  margin: 0.5em 1.5em;
   li {
     padding: 1em 0;
     &:after {
@@ -385,6 +400,9 @@ const TechList = styled.ul`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    li {
+      padding: 0.2em 0;
+    }
   }
 `;
 

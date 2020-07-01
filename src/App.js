@@ -8,6 +8,7 @@ import ProjectPage from './components/ProjectPage';
 import {
   acnhImages,
   gofarImages,
+  gofarMobile,
   videoSearchImages,
 } from './assets/image-data';
 
@@ -31,7 +32,7 @@ const App = () => {
               ]}
               challenges={[
                 'Teaching myself React Native and learning the differences between React & React Native',
-                'Learning how to design for mobile',
+                'Learning how to design for mobile-first',
                 'Data management and storage',
                 'Navigating the Apple Developer & App Store Submission Guidelines',
               ]}
@@ -40,6 +41,7 @@ const App = () => {
               githubUrl={`https://github.com/crbilladeau/new-horizons-companion`}
               images={acnhImages}
               desktop={false}
+              mobileImages={acnhImages}
             />
           )}
         />
@@ -102,6 +104,7 @@ const App = () => {
               githubUrl={`https://github.com/crbilladeau/landing-page-example`}
               images={gofarImages}
               desktop={true}
+              mobileImages={gofarMobile}
             />
           )}
         />
@@ -147,6 +150,7 @@ const App = () => {
               githubUrl={`https://github.com/crbilladeau/video-search`}
               images={videoSearchImages}
               desktop={true}
+              // mobileImages={videoSearchMobileImages}
             />
           )}
         />
