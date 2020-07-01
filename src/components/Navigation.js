@@ -185,7 +185,7 @@ const StyledLink = styled(Link)`
   color: magenta;
   cursor: pointer;
   font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 1pt;
   margin: 1em;
