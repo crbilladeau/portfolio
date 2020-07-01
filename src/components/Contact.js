@@ -11,49 +11,49 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <Header id='contact'></Header>
-      <SmallTriangle></SmallTriangle>
-      <BigTriangle></BigTriangle>
-
-      <Title
-        data-aos='fade-in'
-        data-aos-offset='300'
-        data-aos-easing='ease-in-cubic'
-        data-aos-duration='1000'
-      >
-        contact
-      </Title>
-
-      <FormContainer
-        data-aos='fade-up-right'
-        data-aos-offset='100'
-        data-aos-easing='ease-in-cubic'
-        data-aos-duration='800'
-      >
-        <ContactForm />
-        <IconContainer>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-            <Icon
-              onClick={() => openUrl('https://github.com/crbilladeau')}
-              src={require('../assets/images/github.png')}
-            />
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-            <Icon
-              onClick={() =>
-                openUrl('https://www.linkedin.com/in/charlie-billadeau-033/')
-              }
-              src={require('../assets/images/linkedin.png')}
-            />
-          </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-            <Icon
-              onClick={() => openUrl('https://codesandbox.io/u/crbilladeau')}
-              src={require('../assets/images/codesandbox.png')}
-            />
-          </motion.div>
-        </IconContainer>
-        <Email>charlie.billadeau@gmail.com</Email>
-      </FormContainer>
+      <SmallTriangle>
+        <Title
+          data-aos='fade-in'
+          data-aos-offset='300'
+          data-aos-easing='ease-in-cubic'
+          data-aos-duration='1000'
+        >
+          contact
+        </Title>
+      </SmallTriangle>
+      <BigTriangle>
+        <FormContainer
+          data-aos='fade-up-right'
+          data-aos-offset='100'
+          data-aos-easing='ease-in-cubic'
+          data-aos-duration='800'
+        >
+          <ContactForm />
+          <IconContainer>
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              <Icon
+                onClick={() => openUrl('https://github.com/crbilladeau')}
+                src={require('../assets/images/github.png')}
+              />
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              <Icon
+                onClick={() =>
+                  openUrl('https://www.linkedin.com/in/charlie-billadeau-033/')
+                }
+                src={require('../assets/images/linkedin.png')}
+              />
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              <Icon
+                onClick={() => openUrl('https://codesandbox.io/u/crbilladeau')}
+                src={require('../assets/images/codesandbox.png')}
+              />
+            </motion.div>
+          </IconContainer>
+          <Email>charlie.billadeau@gmail.com</Email>
+        </FormContainer>
+      </BigTriangle>
     </ContactWrapper>
   );
 };
@@ -64,7 +64,6 @@ const ContactWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  position: relative;
   height: 100vh;
   width: 100wv;
   overflow: hidden;
@@ -82,54 +81,72 @@ const Header = styled.h2`
 `;
 
 const BigTriangle = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  border-left: 1000px solid transparent;
-  border-right: 1000px solid transparent;
+  position: relative;
+  border-left: 80vw solid transparent;
+  border-right: 80vw solid transparent;
   border-bottom: 700px solid #8ffaff;
-  z-index: -2;
+  @media screen and (max-width: 768px) {
+    border-left: 100vh solid transparent;
+    border-right: 100vh solid transparent;
+    border-bottom: 70vh solid #8ffaff;
+  }
 `;
 
 const SmallTriangle = styled.div`
-  position: absolute;
-  border-left: 255px solid transparent;
-  border-right: 1400px solid transparent;
-  border-top: 275px solid whitesmoke;
-  z-index: -1;
+  position: relative;
+  border-left: 15vw solid transparent;
+  border-right: 100vw solid transparent;
+  border-top: 250px solid whitesmoke;
+  @media screen and (max-width: 1440px) {
+    border-top: 300px solid whitesmoke;
+  }
+  @media screen and (max-width: 768px) {
+    border-left: 200px solid transparent;
+    border-right: 800px solid transparent;
+    border-top: 40vh solid whitesmoke;
+  }
 `;
 
 const Title = styled.h2`
-  align-self: flex-start;
   color: #211a23;
   font-family: 'Crimson Pro Semi', serif;
-  font-size: 130px;
+  font-size: 120px;
   font-weight: 200;
-  margin: -100px 0 0 120px;
   text-transform: uppercase;
   text-align: left;
-  width: 100%;
-  @media screen and (max-width: 1024px) {
-    margin: 0px 0 0 40px;
+  position: absolute;
+  bottom: 100px;
+  @media screen and (max-width: 1440px) {
+    font-size: 80px;
+    bottom: 120px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 90px;
-    margin: 0px 0 0 40px;
-  }
-  @media screen and (max-width: 425px) {
-    text-align: center;
-    margin: 60px 0px 0px 0px;
-  }
-  @media screen and (max-width: 425px) {
     font-size: 70px;
+  }
+  @media screen and (max-width: 600px) {
+    left: 80px;
+    font-size: 65px;
+  }
+  @media screen and (max-width: 425px) {
+    font-size: 60px;
+    left: 160px;
+    bottom: 150px;
   }
 `;
 
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin-top: 100px; */
-  width: 100%;
+  position: absolute;
+  top: 350px;
+  right: -440px;
+  @media screen and (max-width: 1024px) {
+    top: 200px;
+    right: -130px;
+  }
+  @media screen and (max-width: 768px) {
+    top: 150px;
+  }
 `;
 
 const IconContainer = styled.div`

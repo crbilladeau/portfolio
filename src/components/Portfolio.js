@@ -148,7 +148,8 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
 `;
 
 const PortfolioContainer = styled.div`
