@@ -55,8 +55,9 @@ const FormTitle = styled.h2`
   font-size: 22px;
   font-weight: 300;
   margin: 1em 0;
-  @media screen and (max-width: 1024px) {
-    margin: 1em 0 0 0;
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    margin: 0.5em 0 0 0;
   }
 `;
 
@@ -67,7 +68,11 @@ const InputLabel = styled.label`
   text-transform: uppercase;
   margin: 0 0.5em 0 1.5em;
   @media screen and (max-width: 1024px) {
-    margin: 0.5em 0 0.5em 0;
+    margin: 0 0.5em;
+    font-size: 24px;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0.2em 0em;
   }
 `;
 
@@ -86,6 +91,12 @@ const Input = styled.input`
   font-size: 16px;
   width: 200px;
   padding: 5px;
+  @media screen and (max-width: 1024px) {
+    width: 150px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 250px;
+  }
 `;
 
 const Button = styled.button`
@@ -102,7 +113,15 @@ const Button = styled.button`
     color: whitesmoke;
     cursor: pointer;
   }
+  @media screen and (max-width: 1440px) {
+    padding: 0.5em 1em;
+  }
   @media screen and (max-width: 1024px) {
-    margin: 1em 0;
+    padding: 0.5em;
+    font-size: 16px;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0.5em 0;
+    padding: 0.5em 2.5em;
   }
 `;

@@ -84,11 +84,11 @@ const BigTriangle = styled.div`
   position: relative;
   border-left: 80vw solid transparent;
   border-right: 80vw solid transparent;
-  border-bottom: 700px solid #8ffaff;
+  border-bottom: 70vh solid #8ffaff;
   @media screen and (max-width: 768px) {
     border-left: 100vh solid transparent;
     border-right: 100vh solid transparent;
-    border-bottom: 70vh solid #8ffaff;
+    border-bottom: 60vh solid #8ffaff;
   }
 `;
 
@@ -97,9 +97,6 @@ const SmallTriangle = styled.div`
   border-left: 15vw solid transparent;
   border-right: 100vw solid transparent;
   border-top: 250px solid whitesmoke;
-  @media screen and (max-width: 1440px) {
-    border-top: 300px solid whitesmoke;
-  }
   @media screen and (max-width: 768px) {
     border-left: 200px solid transparent;
     border-right: 800px solid transparent;
@@ -115,16 +112,18 @@ const Title = styled.h2`
   text-transform: uppercase;
   text-align: left;
   position: absolute;
-  bottom: 100px;
+  bottom: 60px;
   @media screen and (max-width: 1440px) {
     font-size: 80px;
-    bottom: 120px;
+    bottom: 80px;
   }
   @media screen and (max-width: 768px) {
+    bottom: 140px;
     font-size: 70px;
+    left: 40px;
   }
   @media screen and (max-width: 600px) {
-    left: 80px;
+    left: 90px;
     font-size: 65px;
   }
   @media screen and (max-width: 425px) {
@@ -138,14 +137,14 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 350px;
-  right: -440px;
+  top: 250px;
+  right: -410px;
   @media screen and (max-width: 1024px) {
-    top: 200px;
-    right: -130px;
+    right: -320px;
   }
   @media screen and (max-width: 768px) {
-    top: 150px;
+    top: 80px;
+    right: -140px;
   }
 `;
 
@@ -159,6 +158,9 @@ const Icon = styled.img`
   cursor: pointer;
   margin: 10px 20px;
   width: 50px;
+  @media screen and (max-width: 768px) {
+    margin: 0.2em 1.5em;
+  }
 `;
 
 const Email = styled.p`
@@ -167,6 +169,9 @@ const Email = styled.p`
   font-weight: 700;
   letter-spacing: 1pt;
   padding: 10px;
+  @media screen and (max-width: 768px) {
+    padding: 0.5em 0em;
+  }
 `;
 
 export default Contact;
