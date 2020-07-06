@@ -137,7 +137,7 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 250px;
+  top: 200px;
   right: -410px;
   @media screen and (max-width: 1024px) {
     right: -320px;
@@ -168,6 +168,7 @@ const Email = styled.p`
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1pt;
+  margin: 0.5em 0;
   padding: 10px;
   @media screen and (max-width: 768px) {
     padding: 0.5em 0em;
