@@ -64,7 +64,7 @@ const ContactWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100wv;
   overflow: hidden;
 `;
@@ -154,16 +154,19 @@ const FormContainer = styled.div`
   position: absolute;
   top: 250px;
   right: -410px;
+  @media screen and (max-width: 1440px) {
+    top: 350px;
+  }
   @media screen and (max-width: 1024px) {
-    top: 150px;
+    top: 250px;
     right: -320px;
   }
   @media screen and (max-width: 768px) {
-    top: 100px;
+    top: 200px;
     right: -140px;
   }
   @media screen and (max-width: 425px) {
-    top: 80px;
+    top: 150px;
   }
 `;
 

@@ -150,7 +150,7 @@ const App = () => {
               githubUrl={`https://github.com/crbilladeau/video-search`}
               images={videoSearchImages}
               desktop={true}
-              // mobileImages={videoSearchMobileImages}
+              mobileImages={gofarMobile}
             />
           )}
         />
