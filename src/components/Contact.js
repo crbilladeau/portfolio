@@ -82,15 +82,17 @@ const Header = styled.h2`
 
 const BigTriangle = styled.div`
   position: relative;
-  border-left: 1000px solid transparent;
-  border-right: 1000px solid transparent;
-  border-bottom: 700px solid #8ffaff;
+  border-left: 900px solid transparent;
+  border-right: 900px solid transparent;
+  border-bottom: 600px solid #8ffaff;
+  @media screen and (max-width: 1440px) {
+    border-left: 1000px solid transparent;
+    border-right: 1000px solid transparent;
+    border-bottom: 800px solid #8ffaff;
+  }
   @media screen and (max-width: 768px) {
     border-left: 1000px solid transparent;
     border-right: 1000px solid transparent;
-  }
-  @media screen and (max-width: 768px) {
-    border-bottom: 600px solid #8ffaff;
   }
 `;
 
@@ -98,7 +100,7 @@ const SmallTriangle = styled.div`
   position: relative;
   border-left: 150px solid transparent;
   border-right: 1500px solid transparent;
-  border-top: 250px solid whitesmoke;
+  border-top: 500px solid whitesmoke;
   @media screen and (max-width: 1440px) {
     border-left: 150px solid transparent;
     border-right: 1000px solid transparent;
@@ -124,7 +126,7 @@ const Title = styled.h2`
   text-transform: uppercase;
   text-align: left;
   position: absolute;
-  bottom: 60px;
+  bottom: 250px;
   @media screen and (max-width: 1440px) {
     font-size: 80px;
     bottom: 80px;
@@ -142,7 +144,7 @@ const Title = styled.h2`
   @media screen and (max-width: 425px) {
     font-size: 60px;
     left: 160px;
-    bottom: 120px;
+    bottom: 80px;
   }
 `;
 
