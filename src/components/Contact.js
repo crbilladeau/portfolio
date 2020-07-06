@@ -156,7 +156,7 @@ const FormContainer = styled.div`
     right: -320px;
   }
   @media screen and (max-width: 768px) {
-    top: 140px;
+    top: 200px;
     right: -140px;
   }
   @media screen and (max-width: 425px) {
