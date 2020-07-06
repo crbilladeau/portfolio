@@ -168,7 +168,7 @@ const Email = styled.p`
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1pt;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
   padding: 10px;
   @media screen and (max-width: 768px) {
     padding: 0.5em 0em;
