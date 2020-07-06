@@ -146,7 +146,7 @@ const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 250px;
+  top: 350px;
   right: -410px;
   @media screen and (max-width: 1440px) {
     top: 250px;
@@ -156,7 +156,7 @@ const FormContainer = styled.div`
     right: -320px;
   }
   @media screen and (max-width: 768px) {
-    top: 100px;
+    top: 140px;
     right: -140px;
   }
   @media screen and (max-width: 425px) {
