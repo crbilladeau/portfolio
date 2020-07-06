@@ -82,25 +82,37 @@ const Header = styled.h2`
 
 const BigTriangle = styled.div`
   position: relative;
-  border-left: 80vw solid transparent;
-  border-right: 80vw solid transparent;
-  border-bottom: 70vh solid #8ffaff;
+  border-left: 1000px solid transparent;
+  border-right: 1000px solid transparent;
+  border-bottom: 700px solid #8ffaff;
   @media screen and (max-width: 768px) {
-    border-left: 100vh solid transparent;
-    border-right: 100vh solid transparent;
-    border-bottom: 60vh solid #8ffaff;
+    border-left: 1000px solid transparent;
+    border-right: 1000px solid transparent;
+  }
+  @media screen and (max-width: 768px) {
+    border-bottom: 600px solid #8ffaff;
   }
 `;
 
 const SmallTriangle = styled.div`
   position: relative;
-  border-left: 15vw solid transparent;
-  border-right: 100vw solid transparent;
+  border-left: 150px solid transparent;
+  border-right: 1500px solid transparent;
   border-top: 250px solid whitesmoke;
+  @media screen and (max-width: 1440px) {
+    border-left: 150px solid transparent;
+    border-right: 1000px solid transparent;
+    border-top: 250px solid whitesmoke;
+  }
   @media screen and (max-width: 768px) {
     border-left: 200px solid transparent;
     border-right: 800px solid transparent;
-    border-top: 40vh solid whitesmoke;
+    border-top: 250px solid whitesmoke;
+  }
+  @media screen and (max-width: 425px) {
+    border-left: 200px solid transparent;
+    border-right: 800px solid transparent;
+    border-top: 200px solid whitesmoke;
   }
 `;
 
@@ -116,9 +128,10 @@ const Title = styled.h2`
   @media screen and (max-width: 1440px) {
     font-size: 80px;
     bottom: 80px;
+    left: 60px;
   }
   @media screen and (max-width: 768px) {
-    bottom: 140px;
+    bottom: 100px;
     font-size: 70px;
     left: 40px;
   }
@@ -129,7 +142,7 @@ const Title = styled.h2`
   @media screen and (max-width: 425px) {
     font-size: 60px;
     left: 160px;
-    bottom: 150px;
+    bottom: 120px;
   }
 `;
 
@@ -140,7 +153,7 @@ const FormContainer = styled.div`
   top: 250px;
   right: -410px;
   @media screen and (max-width: 1024px) {
-    top: 200px;
+    top: 150px;
     right: -320px;
   }
   @media screen and (max-width: 768px) {
@@ -148,7 +161,7 @@ const FormContainer = styled.div`
     right: -140px;
   }
   @media screen and (max-width: 425px) {
-    top: 60px;
+    top: 80px;
   }
 `;
 
@@ -172,7 +185,6 @@ const Email = styled.p`
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1pt;
-  margin: 0 0 0.5em 0;
   padding: 10px;
   @media screen and (max-width: 768px) {
     padding: 0.5em 0em;
