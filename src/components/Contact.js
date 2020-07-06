@@ -64,7 +64,7 @@ const ContactWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /* height: 100vh; */
+  height: 100vh;
   width: 100wv;
   overflow: hidden;
 `;
@@ -82,39 +82,32 @@ const Header = styled.h2`
 
 const BigTriangle = styled.div`
   position: relative;
-  border-left: 900px solid transparent;
-  border-right: 900px solid transparent;
-  border-bottom: 600px solid #8ffaff;
+  border-left: 100vw solid transparent;
+  border-right: 100vw solid transparent;
+  border-bottom: 700px solid #8ffaff;
   @media screen and (max-width: 1440px) {
-    border-left: 1000px solid transparent;
-    border-right: 1000px solid transparent;
     border-bottom: 800px solid #8ffaff;
   }
   @media screen and (max-width: 768px) {
-    border-left: 1000px solid transparent;
-    border-right: 1000px solid transparent;
   }
 `;
 
 const SmallTriangle = styled.div`
   position: relative;
-  border-left: 150px solid transparent;
-  border-right: 1500px solid transparent;
-  border-top: 500px solid whitesmoke;
+  border-left: 15vh solid transparent;
+  border-right: 100vw solid transparent;
+  border-top: 30vh solid whitesmoke;
   @media screen and (max-width: 1440px) {
     border-left: 150px solid transparent;
-    border-right: 1000px solid transparent;
     border-top: 250px solid whitesmoke;
   }
   @media screen and (max-width: 768px) {
     border-left: 200px solid transparent;
-    border-right: 800px solid transparent;
     border-top: 250px solid whitesmoke;
   }
   @media screen and (max-width: 425px) {
     border-left: 200px solid transparent;
-    border-right: 800px solid transparent;
-    border-top: 200px solid whitesmoke;
+    border-top: 300px solid whitesmoke;
   }
 `;
 
@@ -126,25 +119,26 @@ const Title = styled.h2`
   text-transform: uppercase;
   text-align: left;
   position: absolute;
-  bottom: 250px;
+  bottom: 120px;
+  left: 100px;
   @media screen and (max-width: 1440px) {
     font-size: 80px;
-    bottom: 80px;
-    left: 60px;
+    bottom: 100px;
+    left: 0px;
   }
   @media screen and (max-width: 768px) {
-    bottom: 100px;
+    bottom: 120px;
     font-size: 70px;
-    left: 40px;
+    left: 20px;
   }
   @media screen and (max-width: 600px) {
-    left: 90px;
+    left: -40px;
     font-size: 65px;
   }
   @media screen and (max-width: 425px) {
     font-size: 60px;
-    left: 160px;
-    bottom: 80px;
+    left: -80px;
+    bottom: 140px;
   }
 `;
 
@@ -155,18 +149,18 @@ const FormContainer = styled.div`
   top: 250px;
   right: -410px;
   @media screen and (max-width: 1440px) {
-    top: 350px;
+    top: 250px;
   }
   @media screen and (max-width: 1024px) {
-    top: 250px;
+    top: 200px;
     right: -320px;
   }
   @media screen and (max-width: 768px) {
-    top: 200px;
+    top: 100px;
     right: -140px;
   }
   @media screen and (max-width: 425px) {
-    top: 150px;
+    top: 100px;
   }
 `;
 
