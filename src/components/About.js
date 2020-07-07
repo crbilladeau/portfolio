@@ -104,9 +104,9 @@ const About = () => {
             </InfoTitle>
             <LibraryContainer>
               <SkillTitle>
-                Styled Components, Redux, React Router, Framer Motion, AOS,
-                Foundation CSS, Materialize CSS, Semantic UI, jQuery, axios,
-                Auth0, Lodash
+                Redux, React Router, styled components, jQuery, axios, Auth0,
+                Lodash, Framer Motion, Bootstrap, Foundation, Materialize,
+                Semantic UI
               </SkillTitle>
             </LibraryContainer>
           </AboutBox>
