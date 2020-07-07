@@ -120,7 +120,7 @@ const About = () => {
         data-aos-duration='1000'
       >
         <Bio>
-          I'm a Frontend Developer specializing in JavaScript and React
+          I'm a Front-end Developer specializing in JavaScript and React
           development for web & mobile. I care about thoughtful, human-oriented
           design, and I build apps that are fast-loading, responsive, and
           centered on user experience. As a life-long learner, I'm always
