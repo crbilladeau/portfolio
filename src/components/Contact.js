@@ -97,7 +97,7 @@ const BigTriangle = styled.div`
   @media screen and (max-width: 425px) {
     border-left: 100vh solid transparent;
     border-right: 100vh solid transparent;
-    border-bottom: 600px solid #8ffaff;
+    border-bottom: 500px solid #8ffaff;
   }
 `;
 
@@ -173,7 +173,7 @@ const FormContainer = styled.div`
     right: -140px;
   }
   @media screen and (max-width: 425px) {
-    top: 100px;
+    top: 80px;
   }
 `;
 
@@ -189,6 +189,9 @@ const Icon = styled.img`
   width: 50px;
   @media screen and (max-width: 768px) {
     margin: 0.2em 1.5em;
+  }
+  @media screen and (max-width: 425px) {
+    width: 45px;
   }
 `;
 
