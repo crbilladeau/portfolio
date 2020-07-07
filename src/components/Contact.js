@@ -97,7 +97,7 @@ const BigTriangle = styled.div`
   @media screen and (max-width: 425px) {
     border-left: 100vh solid transparent;
     border-right: 100vh solid transparent;
-    border-bottom: 500px solid #8ffaff;
+    border-bottom: 600px solid #8ffaff;
   }
 `;
 
@@ -115,9 +115,9 @@ const SmallTriangle = styled.div`
     border-top: 250px solid whitesmoke;
   }
   @media screen and (max-width: 425px) {
-    border-right: 200px solid transparent;
+    border-right: 25vw solid transparent;
     border-left: 100vw solid transparent;
-    border-top: 250px solid whitesmoke;
+    border-top: 25vh solid whitesmoke;
   }
 `;
 
@@ -129,7 +129,7 @@ const Title = styled.h2`
   text-transform: uppercase;
   text-align: left;
   position: absolute;
-  bottom: 120px;
+  bottom: 60px;
   left: 100px;
   @media screen and (max-width: 1440px) {
     font-size: 80px;
@@ -148,9 +148,14 @@ const Title = styled.h2`
     font-size: 65px;
   }
   @media screen and (max-width: 425px) {
-    font-size: 60px;
-    left: -180px;
-    bottom: 120px;
+    font-size: 55px;
+    left: -55vw;
+    bottom: 12vh;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 50px;
+    left: -60vw;
+    bottom: 12vh;
   }
 `;
 
@@ -173,7 +178,7 @@ const FormContainer = styled.div`
     right: -140px;
   }
   @media screen and (max-width: 425px) {
-    top: 80px;
+    top: 15vh;
   }
 `;
 
@@ -203,6 +208,9 @@ const Email = styled.p`
   padding: 10px;
   @media screen and (max-width: 768px) {
     padding: 0.5em 0em;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 0.2em 0em;
   }
 `;
 

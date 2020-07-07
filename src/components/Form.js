@@ -59,6 +59,10 @@ const FormTitle = styled.h2`
     font-size: 20px;
     margin: 0.5em 0 0 0;
   }
+  @media screen and (max-width: 425px) {
+    font-size: 18px;
+    margin: 0.5em 0 0 0;
+  }
 `;
 
 const InputLabel = styled.label`
@@ -73,6 +77,9 @@ const InputLabel = styled.label`
   }
   @media screen and (max-width: 768px) {
     margin: 0.2em 0em;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
   }
 `;
 
