@@ -115,8 +115,9 @@ const SmallTriangle = styled.div`
     border-top: 250px solid whitesmoke;
   }
   @media screen and (max-width: 425px) {
-    border-left: 200px solid transparent;
-    border-top: 300px solid whitesmoke;
+    border-right: 200px solid transparent;
+    border-left: 100vw solid transparent;
+    border-top: 250px solid whitesmoke;
   }
 `;
 
@@ -148,8 +149,8 @@ const Title = styled.h2`
   }
   @media screen and (max-width: 425px) {
     font-size: 60px;
-    left: -80px;
-    bottom: 140px;
+    left: -180px;
+    bottom: 120px;
   }
 `;
 
