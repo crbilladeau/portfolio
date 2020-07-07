@@ -30,7 +30,9 @@ const Navigation = () => {
           navOpen={navOpen}
         />
         <LinkContainer>
-          <StyledLink to='/'>HOME</StyledLink>
+          <StyledLink to='/#home' onClick={() => setNavOpen(false)}>
+            HOME
+          </StyledLink>
 
           <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
             PORTFOLIO
@@ -206,7 +208,7 @@ const StyledALink = styled.a`
   color: magenta;
   cursor: pointer;
   font-family: 'Source Code Pro', monospace;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 1pt;
   margin: 20px;
