@@ -67,7 +67,7 @@ const InputLabel = styled.label`
   font-size: 26px;
   text-transform: uppercase;
   margin: 0 0.5em 0 1.5em;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1440px) {
     margin: 0 0.5em;
     font-size: 24px;
   }
@@ -91,7 +91,7 @@ const Input = styled.input`
   font-size: 16px;
   width: 200px;
   padding: 5px;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1440px) {
     width: 150px;
   }
   @media screen and (max-width: 768px) {
@@ -114,9 +114,6 @@ const Button = styled.button`
     cursor: pointer;
   }
   @media screen and (max-width: 1440px) {
-    padding: 0.5em 1em;
-  }
-  @media screen and (max-width: 1024px) {
     padding: 0.5em;
     font-size: 16px;
   }

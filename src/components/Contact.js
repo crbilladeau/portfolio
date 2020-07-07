@@ -88,7 +88,16 @@ const BigTriangle = styled.div`
   @media screen and (max-width: 1440px) {
     border-bottom: 800px solid #8ffaff;
   }
+  @media screen and (max-width: 1024px) {
+    border-bottom: 500px solid #8ffaff;
+  }
   @media screen and (max-width: 768px) {
+    border-bottom: 800px solid #8ffaff;
+  }
+  @media screen and (max-width: 425px) {
+    border-left: 100vh solid transparent;
+    border-right: 100vh solid transparent;
+    border-bottom: 600px solid #8ffaff;
   }
 `;
 
@@ -124,10 +133,12 @@ const Title = styled.h2`
   @media screen and (max-width: 1440px) {
     font-size: 80px;
     bottom: 100px;
-    left: 0px;
+    left: 20px;
+  }
+  @media screen and (max-width: 1024px) {
   }
   @media screen and (max-width: 768px) {
-    bottom: 120px;
+    bottom: 100px;
     font-size: 70px;
     left: 20px;
   }
@@ -147,16 +158,17 @@ const FormContainer = styled.div`
   flex-direction: column;
   position: absolute;
   top: 250px;
-  right: -410px;
+  right: -430px;
   @media screen and (max-width: 1440px) {
     top: 150px;
+    right: -320px;
   }
   @media screen and (max-width: 1024px) {
-    top: 100px;
+    top: 140px;
     right: -320px;
   }
   @media screen and (max-width: 768px) {
-    top: 200px;
+    top: 220px;
     right: -140px;
   }
   @media screen and (max-width: 425px) {
