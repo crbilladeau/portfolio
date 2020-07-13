@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import ContactForm from './Form';
 import background from '../assets/images/bg.svg';
+import background2 from '../assets/images/bg2.svg';
 
 const Contact = () => {
   const openUrl = (url) => {
@@ -87,6 +88,11 @@ const Background = styled.div`
   @media screen and (max-width: 1024px) {
     background-position: center;
   }
+  @media screen and (max-width: 425px) {
+    background: url(${background2}) no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 `;
 
 const Header = styled.h2`
@@ -115,6 +121,8 @@ const Title = styled.h2`
   z-index: 2;
   @media screen and (max-width: 426px) {
     font-size: 12vw;
+    margin: 0 0.5em;
+    text-align: right;
   }
 `;
 
