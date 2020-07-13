@@ -84,7 +84,6 @@ const Background = styled.div`
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  z-index: -2;
   @media screen and (max-width: 1024px) {
     background-position: center;
   }
