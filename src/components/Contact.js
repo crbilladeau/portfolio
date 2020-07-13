@@ -93,8 +93,6 @@ const Header = styled.h2`
   :before {
     display: block;
     content: ' ';
-    margin-top: -285px;
-    height: 285px;
     visibility: hidden;
     pointer-events: none;
   }
@@ -115,6 +113,9 @@ const Title = styled.h2`
   text-align: left;
   margin: 0 1em;
   z-index: 2;
+  @media screen and (max-width: 426px) {
+    font-size: 12vw;
+  }
 `;
 
 const FormContainer = styled.div`
