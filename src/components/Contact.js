@@ -13,8 +13,7 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <Background>
-        <Header id='contact' />
-        <Box>
+        <Box id='contact'>
           <Title
             data-aos='fade-in'
             data-aos-offset='300'
