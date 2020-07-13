@@ -140,11 +140,11 @@ const GalleryImageMobile = styled(motion.img)`
 const NextButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: ${(props) => (props.desktop ? '30vw' : '85vh')};
+  height: ${(props) => (props.desktop ? '30vw' : '80vh')};
   justify-content: space-between;
   @media screen and (max-width: 1440px) {
     margin-bottom: 110px;
-    height: ${(props) => (props.desktop ? '30vw' : '72vh')};
+    height: ${(props) => (props.desktop ? '30vw' : '70vh')};
   }
   @media screen and (max-width: 1024px) {
     height: ${(props) => (props.desktop ? '60vw' : '90vh')};
