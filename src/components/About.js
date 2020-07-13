@@ -147,7 +147,8 @@ const AboutWrapper = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   @media screen and (max-width: 768px) {
     background: linear-gradient(160deg, #8ffaff 50%, #211a23 50%);
