@@ -12,47 +12,54 @@ const Contact = () => {
   return (
     <ContactWrapper>
       <Background>
-        <Header id='contact'></Header>
-        <Title
-          data-aos='fade-in'
-          data-aos-offset='300'
-          data-aos-easing='ease-in-cubic'
-          data-aos-duration='1000'
-        >
-          CONTACT
-        </Title>
-
-        <FormContainer
-          data-aos='fade-up-right'
-          data-aos-offset='100'
-          data-aos-easing='ease-in-cubic'
-          data-aos-duration='800'
-        >
-          <ContactForm />
-          <IconContainer>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <Icon
-                onClick={() => openUrl('https://github.com/crbilladeau')}
-                src={require('../assets/images/github.png')}
-              />
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <Icon
-                onClick={() =>
-                  openUrl('https://www.linkedin.com/in/charlie-billadeau-033/')
-                }
-                src={require('../assets/images/linkedin.png')}
-              />
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-              <Icon
-                onClick={() => openUrl('https://codesandbox.io/u/crbilladeau')}
-                src={require('../assets/images/codesandbox.png')}
-              />
-            </motion.div>
-          </IconContainer>
-          <Email>charlie.billadeau@gmail.com</Email>
-        </FormContainer>
+        <Header id='contact' />
+        <Box>
+          <Title
+            data-aos='fade-in'
+            data-aos-offset='300'
+            data-aos-easing='ease-in-cubic'
+            data-aos-duration='1000'
+          >
+            CONTACT
+          </Title>
+        </Box>
+        <Box>
+          <FormContainer
+            data-aos='fade-up-right'
+            data-aos-offset='100'
+            data-aos-easing='ease-in-cubic'
+            data-aos-duration='800'
+          >
+            <ContactForm />
+            <IconContainer>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                <Icon
+                  onClick={() => openUrl('https://github.com/crbilladeau')}
+                  src={require('../assets/images/github.png')}
+                />
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                <Icon
+                  onClick={() =>
+                    openUrl(
+                      'https://www.linkedin.com/in/charlie-billadeau-033/'
+                    )
+                  }
+                  src={require('../assets/images/linkedin.png')}
+                />
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+                <Icon
+                  onClick={() =>
+                    openUrl('https://codesandbox.io/u/crbilladeau')
+                  }
+                  src={require('../assets/images/codesandbox.png')}
+                />
+              </motion.div>
+            </IconContainer>
+            <Email>charlie.billadeau@gmail.com</Email>
+          </FormContainer>
+        </Box>
       </Background>
     </ContactWrapper>
   );
@@ -71,7 +78,7 @@ const ContactWrapper = styled.div`
 const Background = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background: url(${background}) no-repeat;
   background-size: cover;
   width: 100vw;
@@ -93,6 +100,12 @@ const Header = styled.h2`
   }
 `;
 
+const Box = styled.div`
+  margin: 3em 0em;
+  height: 100%;
+  width: 100%;
+`;
+
 const Title = styled.h2`
   color: #211a23;
   font-family: 'Crimson Pro Semi', serif;
@@ -100,7 +113,7 @@ const Title = styled.h2`
   font-weight: 200;
   text-transform: uppercase;
   text-align: left;
-  margin: 0 1em 2.5em 1em;
+  margin: 0 1em;
   z-index: 2;
 `;
 
