@@ -140,6 +140,7 @@ const ProjectWrapper = styled.div`
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  height: 100vh;
   width: 100wv;
   overflow: hidden;
   @media screen and (max-width: 1024px) {
@@ -153,7 +154,6 @@ const ProjectWrapper = styled.div`
 
 const desktopHexWidth = 800;
 const halfDesktopHexWidth = 550;
-const mobileHexWidth = 500;
 
 const Hexagon = styled(motion.div)`
   border-radius: 2px;

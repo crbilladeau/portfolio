@@ -10,6 +10,7 @@ import {
   gofarImages,
   gofarMobile,
   videoSearchImages,
+  videoMobile,
 } from './assets/image-data';
 
 const App = () => {
@@ -150,7 +151,7 @@ const App = () => {
               githubUrl={`https://github.com/crbilladeau/video-search`}
               images={videoSearchImages}
               desktop={true}
-              mobileImages={gofarMobile}
+              mobileImages={videoMobile}
             />
           )}
         />

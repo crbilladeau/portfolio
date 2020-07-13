@@ -11,6 +11,8 @@ import gofarmobile3 from './images/gofarmobile3.png';
 import gofarmobile4 from './images/gofarmobile4.png';
 import videosearch2 from './images/videosearch1.jpg';
 import videosearch1 from './images/video-search-thumbnail.png';
+import videomobile1 from './images/videomobile1.png';
+import videomobile2 from './images/videomobile2.png';
 
 export const acnhImages = [ACNH1, ACNH2, ACNH3, ACNH4];
 export const gofarImages = [gofar1, gofar2, gofar3];
@@ -21,3 +23,4 @@ export const gofarMobile = [
   gofarmobile4,
 ];
 export const videoSearchImages = [videosearch1, videosearch2];
+export const videoMobile = [videomobile1, videomobile2];
