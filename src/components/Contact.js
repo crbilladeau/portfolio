@@ -88,7 +88,7 @@ const Background = styled.div`
   @media screen and (max-width: 1024px) {
     background-position: center;
   }
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 768px) {
     background: url(${background2}) no-repeat;
     background-position: center;
     background-size: cover;
@@ -119,7 +119,7 @@ const Title = styled.h2`
   text-align: left;
   margin: 0 1em;
   z-index: 2;
-  @media screen and (max-width: 426px) {
+  @media screen and (max-width: 768px) {
     font-size: 12vw;
     margin: 0 0.5em;
     text-align: right;
