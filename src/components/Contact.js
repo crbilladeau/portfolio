@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import ContactForm from './Form';
+import background from '../assets/images/bg.svg';
 
 const Contact = () => {
   const openUrl = (url) => {
@@ -10,18 +11,17 @@ const Contact = () => {
 
   return (
     <ContactWrapper>
-      <Header id='contact'></Header>
-      <SmallTriangle>
+      <Background>
+        <Header id='contact'></Header>
         <Title
           data-aos='fade-in'
           data-aos-offset='300'
           data-aos-easing='ease-in-cubic'
           data-aos-duration='1000'
         >
-          contact
+          CONTACT
         </Title>
-      </SmallTriangle>
-      <BigTriangle>
+
         <FormContainer
           data-aos='fade-up-right'
           data-aos-offset='100'
@@ -53,20 +53,33 @@ const Contact = () => {
           </IconContainer>
           <Email>charlie.billadeau@gmail.com</Email>
         </FormContainer>
-      </BigTriangle>
+      </Background>
     </ContactWrapper>
   );
 };
 
 const ContactWrapper = styled.div`
-  background: transparent;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   height: 100vh;
-  width: 100wv;
-  overflow: hidden;
+  width: 100vw;
+  /* overflow: hidden; */
+`;
+
+const Background = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: url(${background}) no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  @media screen and (max-width: 1024px) {
+    background-position: center;
+  }
 `;
 
 const Header = styled.h2`
@@ -80,106 +93,20 @@ const Header = styled.h2`
   }
 `;
 
-const BigTriangle = styled.div`
-  position: relative;
-  border-left: 100vw solid transparent;
-  border-right: 100vw solid transparent;
-  border-bottom: 700px solid #8ffaff;
-  @media screen and (max-width: 1440px) {
-    border-bottom: 800px solid #8ffaff;
-  }
-  @media screen and (max-width: 1024px) {
-    border-bottom: 500px solid #8ffaff;
-  }
-  @media screen and (max-width: 768px) {
-    border-bottom: 800px solid #8ffaff;
-  }
-  @media screen and (max-width: 425px) {
-    border-left: 100vh solid transparent;
-    border-right: 100vh solid transparent;
-    border-bottom: 600px solid #8ffaff;
-  }
-`;
-
-const SmallTriangle = styled.div`
-  position: relative;
-  border-left: 15vh solid transparent;
-  border-right: 100vw solid transparent;
-  border-top: 30vh solid whitesmoke;
-  @media screen and (max-width: 1440px) {
-    border-left: 150px solid transparent;
-    border-top: 250px solid whitesmoke;
-  }
-  @media screen and (max-width: 768px) {
-    border-left: 200px solid transparent;
-    border-top: 250px solid whitesmoke;
-  }
-  @media screen and (max-width: 425px) {
-    border-right: 25vw solid transparent;
-    border-left: 100vw solid transparent;
-    border-top: 25vh solid whitesmoke;
-  }
-`;
-
 const Title = styled.h2`
   color: #211a23;
   font-family: 'Crimson Pro Semi', serif;
-  font-size: 120px;
+  font-size: 8vw;
   font-weight: 200;
   text-transform: uppercase;
   text-align: left;
-  position: absolute;
-  bottom: 60px;
-  left: 100px;
-  @media screen and (max-width: 1440px) {
-    font-size: 80px;
-    bottom: 100px;
-    left: 20px;
-  }
-  @media screen and (max-width: 1024px) {
-  }
-  @media screen and (max-width: 768px) {
-    bottom: 100px;
-    font-size: 70px;
-    left: 20px;
-  }
-  @media screen and (max-width: 600px) {
-    left: -40px;
-    font-size: 65px;
-  }
-  @media screen and (max-width: 425px) {
-    font-size: 55px;
-    left: -55vw;
-    bottom: 12vh;
-  }
-  @media screen and (max-width: 320px) {
-    font-size: 50px;
-    left: -60vw;
-    bottom: 12vh;
-  }
+  margin: 0 1em 2.5em 1em;
+  z-index: 2;
 `;
 
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 200px;
-  right: -430px;
-  @media screen and (max-width: 1440px) {
-    top: 150px;
-    right: -320px;
-  }
-  @media screen and (max-width: 1024px) {
-    top: 140px;
-    right: -320px;
-  }
-  @media screen and (max-width: 768px) {
-    top: 220px;
-    right: -140px;
-  }
-  @media screen and (max-width: 425px) {
-    top: 15vh;
-  }
 `;
 
 const IconContainer = styled.div`
