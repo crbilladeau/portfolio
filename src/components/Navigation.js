@@ -47,7 +47,7 @@ const Navigation = () => {
           </StyledLink>
 
           <StyledALink
-            href='https://github.com'
+            href='https://crbilladeau.github.io/resume/'
             target='_blank'
             onClick={() => setNavOpen(false)}
           >

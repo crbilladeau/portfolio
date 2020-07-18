@@ -28,7 +28,9 @@ const Landing = () => {
             <Button>CONTACT</Button>
           </Link>
 
-          <Button>RESUME</Button>
+          <Button>
+            <a href='https://crbilladeau.github.io/resume/'>RESUME</a>
+          </Button>
         </ButtonContainer>
       </HeadlineBox>
     </div>
