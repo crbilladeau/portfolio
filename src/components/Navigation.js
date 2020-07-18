@@ -102,6 +102,7 @@ const Navigation = () => {
               <StyledALink
                 href='https://github.com'
                 target='_blank'
+                rel='noopener noreferrer'
                 onClick={() => setNavOpen(false)}
               >
                 RESUME

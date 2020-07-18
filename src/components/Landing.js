@@ -29,7 +29,14 @@ const Landing = () => {
           </Link>
 
           <Button>
-            <a href='https://crbilladeau.github.io/resume/'>RESUME</a>
+            <a
+              href='https://crbilladeau.github.io/resume/'
+              target='_blank'
+              rel='noopener noreferrer'
+              style={{ textDecoration: 'none' }}
+            >
+              RESUME
+            </a>
           </Button>
         </ButtonContainer>
       </HeadlineBox>
