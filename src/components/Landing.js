@@ -27,17 +27,14 @@ const Landing = () => {
           <Link to='/#contact'>
             <Button>CONTACT</Button>
           </Link>
-
-          <Button>
-            <a
-              href='https://crbilladeau.github.io/resume/'
-              target='_blank'
-              rel='noopener noreferrer'
-              style={{ textDecoration: 'none' }}
-            >
-              RESUME
-            </a>
-          </Button>
+          <a
+            href='https://crbilladeau.github.io/resume/'
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ textDecoration: 'none' }}
+          >
+            <Button>RESUME</Button>
+          </a>
         </ButtonContainer>
       </HeadlineBox>
     </div>
@@ -105,6 +102,7 @@ const Button = styled.button`
   font-size: 24px;
   margin: 0 0.5em;
   padding: 0.25em 1em;
+  text-decoration: none;
   &:hover {
     color: magenta;
     cursor: pointer;

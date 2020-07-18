@@ -67,19 +67,19 @@ const About = () => {
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                 <SmallIcon
-                  src={require('../assets/images/graphql.png')}
-                  alt='GraphQL icon'
+                  src={require('../assets/images/github.png')}
+                  alt='Github icon'
                 />
-                <SkillTitle>GraphQL</SkillTitle>
+                <SkillTitle>Github</SkillTitle>
               </motion.div>
 
-              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+              {/* <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                 <SmallIcon
                   src={require('../assets/images/apollo.png')}
                   alt='Apollo icon'
                 />
                 <SkillTitle>Apollo</SkillTitle>
-              </motion.div>
+              </motion.div> */}
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                 <SmallIcon
@@ -91,10 +91,10 @@ const About = () => {
 
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                 <SmallIcon
-                  src={require('../assets/images/webpack.png')}
-                  alt='Webpack icon'
+                  src={require('../assets/images/graphql.png')}
+                  alt='GraphQL icon'
                 />
-                <SkillTitle>Webpack</SkillTitle>
+                <SkillTitle>GraphQL</SkillTitle>
               </motion.div>
             </IconsContainer>
             <InfoTitle>
@@ -104,9 +104,9 @@ const About = () => {
             </InfoTitle>
             <LibraryContainer>
               <SkillTitle>
-                Redux, React Router, styled components, jQuery, axios, Auth0,
-                Lodash, Framer Motion, Bootstrap, Foundation, Materialize,
-                Semantic UI
+                Terminal, Git, Redux, React Router, styled components, Apollo,
+                jQuery, axios, Auth0, lodash, Framer Motion, Bootstrap,
+                Foundation, Materialize, Semantic UI
               </SkillTitle>
             </LibraryContainer>
           </AboutBox>
