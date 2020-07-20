@@ -24,7 +24,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <FormTitle>Send me a message directly!</FormTitle>
+      <FormTitle>Drop me a message!</FormTitle>
       <form
         onSubmit={submitForm}
         action='https://formspree.io/xknqbgwa'
