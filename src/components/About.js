@@ -99,14 +99,14 @@ const About = () => {
             </IconsContainer>
             <InfoTitle>
               <Hearts src={require('../assets/images/heart.png')} alt='heart' />
-              Libraries
+              I Love to Use
               <Hearts src={require('../assets/images/heart.png')} alt='heart' />
             </InfoTitle>
             <LibraryContainer>
               <SkillTitle>
-                Terminal, Git, Redux, React Router, styled components, Apollo,
-                jQuery, axios, Auth0, lodash, Framer Motion, Bootstrap,
-                Foundation, Materialize, Semantic UI
+                Terminal, Git, Redux, React Router, Express, MongoDB, styled
+                components, Apollo, jQuery, axios, Auth0, lodash, Framer Motion,
+                Bootstrap, Foundation, Materialize, Semantic UI
               </SkillTitle>
             </LibraryContainer>
           </AboutBox>
@@ -123,9 +123,9 @@ const About = () => {
           I'm a Front-end Developer specializing in JavaScript and React
           development for web & mobile. I care about thoughtful, human-oriented
           design, and I build apps that are fast-loading, responsive, and
-          centered on user experience. As a life-long learner, I'm always
-          researching the next best practice or technology, from React Hooks to
-          the newest animation library.
+          centered on user experience. I believe in keeping things clean and
+          simple, which means I'm always researching the next best practice or
+          technology, from React Hooks to the newest animation library.
           <br />
           <br />
           <br />

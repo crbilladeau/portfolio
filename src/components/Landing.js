@@ -8,7 +8,7 @@ const Landing = () => {
     <div id='home' style={{ overflow: 'hidden' }}>
       <HeadlineBox>
         <Header>Charlie Billadeau</Header>
-        <SubHeader>Front-end Developer</SubHeader>
+        <SubHeader>Frontend Developer</SubHeader>
         <ButtonContainer
           initial='out'
           animate='in'
