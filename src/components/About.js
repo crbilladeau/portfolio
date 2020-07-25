@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <AboutWrapper id='about'>
-      <div
+      <HexBox
         data-aos='zoom-in'
         data-aos-offset='200'
         data-aos-easing='ease-in-cubic'
@@ -111,7 +111,7 @@ const About = () => {
             </LibraryContainer>
           </AboutBox>
         </Hexagon>
-      </div>
+      </HexBox>
 
       <div
         data-aos='fade-left'
@@ -156,6 +156,12 @@ const AboutWrapper = styled.div`
   }
 `;
 
+const HexBox = styled.div`
+  @media screen and (max-width: 768px) {
+    margin-bottom: -60px;
+  }
+`;
+
 const Bio = styled.p`
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;
@@ -174,7 +180,7 @@ const Bio = styled.p`
   }
   @media screen and (max-width: 768px) {
     font-size: 16px;
-    padding: 60px 20px;
+    padding: 0px 20px;
   }
 `;
 
