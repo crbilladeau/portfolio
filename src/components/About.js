@@ -73,14 +73,6 @@ const About = () => {
                 <SkillTitle>Github</SkillTitle>
               </motion.div>
 
-              {/* <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <SmallIcon
-                  src={require('../assets/images/apollo.png')}
-                  alt='Apollo icon'
-                />
-                <SkillTitle>Apollo</SkillTitle>
-              </motion.div> */}
-
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                 <SmallIcon
                   src={require('../assets/images/nodejs.png')}
@@ -149,16 +141,19 @@ const AboutWrapper = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   @media screen and (max-width: 768px) {
     background: linear-gradient(160deg, #8ffaff 50%, #211a23 50%);
     flex-direction: column;
+    height: auto;
   }
 `;
 
 const HexBox = styled.div`
   @media screen and (max-width: 768px) {
     margin-bottom: -60px;
+  }
+  @media screen and (max-width: 425px) {
+    margin-bottom: 0px;
   }
 `;
 
@@ -180,7 +175,7 @@ const Bio = styled.p`
   }
   @media screen and (max-width: 768px) {
     font-size: 16px;
-    padding: 0px 20px;
+    padding: 40px 20px;
   }
 `;
 
@@ -357,8 +352,18 @@ const SkillTitle = styled.h2`
   @media screen and (max-width: 1440px) {
     font-size: 16px;
   }
+  @media screen and (max-width: 1024px) {
+    &:nth-child(1) {
+      padding: 0 2em;
+      font-size: 14px;
+    }
+  }
   @media screen and (max-width: 425px) {
     font-size: 18px;
+    &:nth-child(1) {
+      padding: 0;
+      font-size: 18px;
+    }
   }
 `;
 
