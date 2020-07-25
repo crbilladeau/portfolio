@@ -155,6 +155,7 @@ const CloseButton = styled.img`
   align-self: flex-end;
   margin: 1.5em 1.5em;
   width: 64px;
+  cursor: pointer;
 `;
 
 const NavContainer = styled.div`
