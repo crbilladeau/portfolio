@@ -299,7 +299,7 @@ const InfoHeader = styled.h2`
 const LineBreak = styled.hr`
   display: block;
   width: 100;
-  border: 1.2px solid #ff00ff;
+  border: 1.5px solid #ff00ff;
   z-index: 20;
   @media screen and (max-width: 1440px) {
     margin: 0 40px;
