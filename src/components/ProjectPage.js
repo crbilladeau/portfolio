@@ -148,6 +148,8 @@ const ProjectWrapper = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     justify-content: space-between;
+    height: auto;
+    overflow: hidden;
   }
 `;
 
