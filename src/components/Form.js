@@ -32,9 +32,9 @@ const ContactForm = () => {
         className='form'
       >
         <InputLabel for='email'>Your Email:</InputLabel>
-        <Input type='email' name='email' />
+        <Input type='email' name='email' id='email' />
         <InputLabel for='message'>Message:</InputLabel>
-        <Input type='text' name='message' />
+        <Input type='text' name='message' id='message' />
 
         {status === 'SUCCESS' ? (
           <Message>Thanks!</Message>
@@ -49,7 +49,7 @@ const ContactForm = () => {
 
 export default ContactForm;
 
-const FormTitle = styled.h2`
+const FormTitle = styled.h3`
   color: #211a23;
   font-family: 'Source Code Pro', monospace;
   font-size: 22px;
