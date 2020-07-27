@@ -36,6 +36,7 @@ const Contact = () => {
                 <Icon
                   onClick={() => openUrl('https://github.com/crbilladeau')}
                   src={require('../assets/images/github.png')}
+                  alt='github'
                 />
               </motion.div>
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
@@ -46,6 +47,7 @@ const Contact = () => {
                     )
                   }
                   src={require('../assets/images/linkedin.png')}
+                  alt='linkedin'
                 />
               </motion.div>
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
@@ -54,6 +56,7 @@ const Contact = () => {
                     openUrl('https://codesandbox.io/u/crbilladeau')
                   }
                   src={require('../assets/images/codesandbox.png')}
+                  alt='codesandbox'
                 />
               </motion.div>
             </IconContainer>
@@ -147,7 +150,7 @@ const Icon = styled.img`
   }
 `;
 
-const Email = styled.p`
+const Email = styled.h4`
   color: #211a23;
   font-size: 20px;
   font-weight: 700;

@@ -278,7 +278,7 @@ const Hexagon = styled(motion.div)`
   }
 `;
 
-const InfoTitle = styled.h2`
+const InfoTitle = styled.h3`
   color: #211a23;
   font-family: 'TypeCond', sans-serif;
   font-size: 35px;
@@ -343,7 +343,7 @@ const SmallIcon = styled.img`
   }
 `;
 
-const SkillTitle = styled.h2`
+const SkillTitle = styled.h4`
   color: #211a23;
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;

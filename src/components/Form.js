@@ -31,9 +31,9 @@ const ContactForm = () => {
         method='POST'
         className='form'
       >
-        <InputLabel>Your Email:</InputLabel>
+        <InputLabel for='email'>Your Email:</InputLabel>
         <Input type='email' name='email' />
-        <InputLabel>Message:</InputLabel>
+        <InputLabel for='message'>Message:</InputLabel>
         <Input type='text' name='message' />
 
         {status === 'SUCCESS' ? (

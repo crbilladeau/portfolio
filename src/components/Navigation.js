@@ -60,12 +60,14 @@ const Navigation = () => {
 
   return (
     <>
+    <noscript>
       <Icon
         src={require('../assets/images/hex.png')}
         alt='hex nav icon'
         onClick={() => setNavOpen(!navOpen)}
         navOpen={navOpen}
       />
+      </noscript>
       <NavBar
         navOpen={navOpen}
         initial='out'
