@@ -56,6 +56,7 @@ const Header = styled.h1`
   color: #8ffaff;
   font-family: 'Crimson Pro Italic', serif;
   font-size: 100px;
+  font-weight: 400;
   line-height: 90px;
   text-transform: uppercase;
   text-align: center;
