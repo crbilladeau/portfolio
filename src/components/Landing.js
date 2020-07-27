@@ -7,7 +7,7 @@ const Landing = () => {
   return (
     <div id='home' style={{ overflow: 'hidden' }}>
       <HeadlineBox>
-        <Header>Charlie Billadeau</Header>
+        <header><Header>Charlie Billadeau</Header></header>
         <SubHeader>Frontend Developer</SubHeader>
         <ButtonContainer
           initial='out'
@@ -52,7 +52,7 @@ const HeadlineBox = styled.div`
   height: 100vh;
 `;
 
-const Header = styled.header`
+const Header = styled.h1`
   color: #8ffaff;
   font-family: 'Crimson Pro Italic', serif;
   font-size: 100px;
