@@ -142,7 +142,6 @@ const ProjectWrapper = styled.div`
   position: relative;
   height: 100vh;
   width: 100wv;
-  overflow: hidden;
   @media screen and (max-width: 1024px) {
     flex-direction: ${(props) => (props.desktop ? 'row' : 'column')};
   }
