@@ -45,6 +45,7 @@ const App = () => {
               images={acnhImages}
               desktop={false}
               mobileImages={acnhImages}
+              acnh={true}
             />
           )}
         />
@@ -89,6 +90,7 @@ const App = () => {
                 'GraphQL Yoga',
               ]}
               demo={`Video Demo`}
+              videoDemo={true}
               demoUrl={`https://drive.google.com/file/d/1HMLxyaNLLoRpaZ72ExAJquzgB4Bkoutg/view?usp=sharing`}
               githubUrl={`https://github.com/crbilladeau/static-electronics`}
               images={staticElectronicsImages}
@@ -126,6 +128,7 @@ const App = () => {
               images={gofarImages}
               desktop={true}
               mobileImages={gofarMobile}
+              gofar={true}
             />
           )}
         />
@@ -173,6 +176,7 @@ const App = () => {
               images={videoSearchImages}
               desktop={true}
               mobileImages={videoMobile}
+              videoApp={true}
             />
           )}
         />

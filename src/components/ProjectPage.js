@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import GalleryChanger from './GalleryChanger';
+import staticVid from '../assets/static.mp4';
 
 const ProjectPage = ({
   title,
@@ -9,11 +10,15 @@ const ProjectPage = ({
   challenges,
   tech,
   demo,
+  videoDemo,
   demoUrl,
   githubUrl,
   images,
   mobileImages,
   desktop,
+  acnh,
+  gofar,
+  videoApp,
 }) => {
   const techList = tech.map((tech) => (
     <ListItems key={tech.toString()}>{tech}</ListItems>
@@ -71,19 +76,27 @@ const ProjectPage = ({
         </InfoContainer>
       </Hexagon>
 
-      <GalleryBox
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={galleryVariants}
-        transition={galleryTransition}
-      >
-        <GalleryChanger
-          images={images}
-          desktop={desktop}
-          mobileImages={mobileImages}
-        />
-      </GalleryBox>
+      {acnh || videoApp || gofar ? (
+        <GalleryBox
+          initial='out'
+          animate='in'
+          exit='out'
+          variants={galleryVariants}
+          transition={galleryTransition}
+        >
+          <GalleryChanger
+            images={images}
+            desktop={desktop}
+            mobileImages={mobileImages}
+          />
+        </GalleryBox>
+      ) : null}
+
+      {videoDemo && (
+        <DemoVideo controls autoPlay>
+          <source src={staticVid} type='video/mp4' />
+        </DemoVideo>
+      )}
     </ProjectWrapper>
   );
 };
@@ -386,7 +399,7 @@ const ListItems = styled.li`
     }
   }
   @media screen and (max-width: 425px) {
-    font-size: 22px;
+    font-size: 20px;
     margin: 0 5%;
     padding-left: 4%;
   }
@@ -459,6 +472,17 @@ const GalleryBox = styled(motion.div)`
   margin: 0 2em;
   @media screen and (max-width: 1024px) {
     margin: 3em 0;
+  }
+`;
+
+const DemoVideo = styled.video`
+  width: 40vw;
+  margin: 1em;
+  @media screen and (max-width: 1440px) {
+    width: 70vw;
+  }
+  @media screen and (max-width: 768px) {
+    width: 90vw;
   }
 `;
 
