@@ -7,6 +7,7 @@ import gofar from '../assets/images/go-far.PNG';
 import gofarmobile from '../assets/images/gofarmobile1.png';
 import videoApp from '../assets/images/video-search-thumbnail.png';
 import videosearchmobile from '../assets/images/videosearchmobile.png';
+import staticElectronics from '../assets/images/static.png';
 import tbd from '../assets/images/placeholder.png';
 
 const Portfolio = () => {
@@ -59,24 +60,28 @@ const Portfolio = () => {
             </Project>
           </Link>
         </ProjectContainer> */}
-        {/* 
+
         <ProjectContainer
           data-aos='flip-right'
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
         >
-          <Link to='/dnd-app'>
+          <Link to='/static-ecommerce'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onMouseEnter={() => setHoverThree(true)}
               onMouseLeave={() => setHoverThree(false)}
-              tbd
+              staticElectronics
             >
-              {hoverThree ? <ProjectTitle>DND App</ProjectTitle> : null}
+              {hoverThree ? (
+                <ProjectTitle>
+                  Static Electronics E-commerce Website
+                </ProjectTitle>
+              ) : null}
             </Project>
           </Link>
-        </ProjectContainer> */}
+        </ProjectContainer>
 
         <ProjectContainer
           data-aos='flip-left'
@@ -184,7 +189,15 @@ const Project = styled(motion.div)`
   width: 100%;
   height: 250px;
   background-image: url(${(props) =>
-    props.acnh ? acnh : props.gofar ? gofar : props.videoApp ? videoApp : tbd});
+    props.acnh
+      ? acnh
+      : props.gofar
+      ? gofar
+      : props.videoApp
+      ? videoApp
+      : props.staticElectronics
+      ? staticElectronics
+      : tbd});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -207,6 +220,8 @@ const Project = styled(motion.div)`
         ? gofarmobile
         : props.videoApp
         ? videosearchmobile
+        : props.staticElectronics
+        ? staticElectronics
         : tbd});
     height: 400px;
   }

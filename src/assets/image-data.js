@@ -13,6 +13,9 @@ import videosearch2 from './images/videosearch1.jpg';
 import videosearch1 from './images/video-search-thumbnail.png';
 import videomobile1 from './images/videomobile1.png';
 import videomobile2 from './images/videomobile2.png';
+import staticElectronics from './images/static.png';
+import staticElectronics2 from './images/staticElectronics2.png';
+import staticElectronics3 from './images/staticElectronics3.png';
 
 export const acnhImages = [ACNH1, ACNH2, ACNH3, ACNH4];
 export const gofarImages = [gofar1, gofar2, gofar3];
@@ -24,3 +27,8 @@ export const gofarMobile = [
 ];
 export const videoSearchImages = [videosearch1, videosearch2];
 export const videoMobile = [videomobile1, videomobile2];
+export const staticElectronicsImages = [
+  staticElectronics,
+  staticElectronics2,
+  staticElectronics3,
+];

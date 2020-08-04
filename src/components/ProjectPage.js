@@ -8,6 +8,7 @@ const ProjectPage = ({
   goals,
   challenges,
   tech,
+  demo,
   demoUrl,
   githubUrl,
   images,
@@ -47,7 +48,7 @@ const ProjectPage = ({
           >
             <ProjectTitle>{title}</ProjectTitle>
             <ButtonBox>
-              <Button onClick={() => openUrl(demoUrl)}>Visit Demo</Button>
+              <Button onClick={() => openUrl(demoUrl)}>Visit {demo}</Button>
               <Button onClick={() => openUrl(githubUrl)}>View Github</Button>
             </ButtonBox>
             <RowBox>
@@ -144,8 +145,9 @@ const ProjectWrapper = styled.div`
   width: 100wv;
   @media screen and (max-width: 1024px) {
     flex-direction: ${(props) => (props.desktop ? 'row' : 'column')};
+    height: auto;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1440px) {
     flex-direction: column;
     justify-content: space-between;
     height: auto;
@@ -189,19 +191,19 @@ const Hexagon = styled(motion.div)`
     border-top: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
   }
   @media screen and (max-width: 1440px) {
-    width: ${halfDesktopHexWidth}px;
-    height: calc(${halfDesktopHexWidth}px / 1.732);
-    margin: 250px 0px calc(${halfDesktopHexWidth}px / 3.464) 40px;
+    width: ${desktopHexWidth}px;
+    height: calc(${desktopHexWidth}px / 1.732);
+    margin: 250px 0px calc(${desktopHexWidth}px / 3.464) 40px;
     &:before,
     &:after {
-      border-left: calc(${halfDesktopHexWidth}px / 2) solid transparent;
-      border-right: calc(${halfDesktopHexWidth}px / 2) solid transparent;
+      border-left: calc(${desktopHexWidth}px / 2) solid transparent;
+      border-right: calc(${desktopHexWidth}px / 2) solid transparent;
     }
     &:before {
-      border-bottom: calc(${halfDesktopHexWidth}px / 3.464) solid whitesmoke;
+      border-bottom: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
     }
     &:after {
-      border-top: calc(${halfDesktopHexWidth}px / 3.464) solid whitesmoke;
+      border-top: calc(${desktopHexWidth}px / 3.464) solid whitesmoke;
     }
   }
 
@@ -257,9 +259,9 @@ const ProjectTitle = styled.h2`
   text-transform: uppercase;
   text-align: center;
   padding: 8px;
-  @media screen and (max-width: 1440px) {
+  /* @media screen and (max-width: 1440px) {
     font-size: 28px;
-  }
+  } */
   @media screen and (max-width: 1024px) {
     font-size: 35px;
   }
@@ -279,10 +281,10 @@ const InfoHeader = styled.h2`
   padding: 10px;
   text-align: center;
   z-index: 20;
-  @media screen and (max-width: 1440px) {
+  /* @media screen and (max-width: 1440px) {
     font-size: 22px;
     padding: 5px;
-  }
+  } */
   @media screen and (max-width: 1024px) {
     font-size: 24px;
     padding: 10px;
@@ -304,6 +306,9 @@ const LineBreak = styled.hr`
   z-index: 20;
   @media screen and (max-width: 1440px) {
     margin: 0 40px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin: 0 80px;
   }
   @media screen and (max-width: 768px) {
     margin: 0 120px;
@@ -333,6 +338,9 @@ const ColumnBox = styled.div`
 const List = styled.ul`
   padding: 1em 0.5em 0 0.5em;
   list-style: none;
+  /* @media screen and (max-width: 1440px) {
+    padding: 1em 0em;
+  } */
 `;
 
 const ListItems = styled.li`
@@ -354,15 +362,15 @@ const ListItems = styled.li`
     top: 6px;
     left: 0;
   }
-  @media screen and (max-width: 1440px) {
+  /* @media screen and (max-width: 1440px) {
     font-size: 16px;
     &:after {
       height: 6px;
       width: 6px;
     }
-  }
+  } */
   @media screen and (max-width: 1024px) {
-    font-size: 22px;
+    font-size: 20px;
     &:after {
       height: 8px;
       width: 8px;
@@ -399,6 +407,12 @@ const TechList = styled.ul`
       display: none;
     }
   }
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    li {
+      padding: 0.2em 0;
+    }
+  }
   @media screen and (max-width: 768px) {
     flex-direction: column;
     li {
@@ -427,10 +441,10 @@ const Button = styled.button`
     color: whitesmoke;
     cursor: pointer;
   }
-  @media screen and (max-width: 1440px) {
+  /* @media screen and (max-width: 1440px) {
     font-size: 14px;
     padding: 4px;
-  }
+  } */
   @media screen and (max-width: 1024px) {
     font-size: 16px;
     padding: 8px;

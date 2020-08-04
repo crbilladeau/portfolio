@@ -11,6 +11,7 @@ import {
   gofarMobile,
   videoSearchImages,
   videoMobile,
+  staticElectronicsImages,
 } from './assets/image-data';
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
                 'Navigating the Apple Developer & App Store Submission Guidelines',
               ]}
               tech={['React Native', 'CSS3', 'Expo', 'lodash']}
+              demo={`Demo`}
               demoUrl={`https://expo.io/@cbilladeau/nh-companion`}
               githubUrl={`https://github.com/crbilladeau/new-horizons-companion`}
               images={acnhImages}
@@ -63,21 +65,38 @@ const App = () => {
           )}
         /> */}
 
-        {/* <Route
-          path='/dnd-app'
+        <Route
+          path='/static-ecommerce'
           component={() => (
             <ProjectPage
-              title={`DND App`}
-              goals={['Goals Placeholder']}
-              challenges={['Challenges Placeholder']}
-              tech={['React']}
-              demoUrl={`https://github.com`}
-              githubUrl={`https://github.com`}
-              images={['']}
+              title={`Static Electronics E-commerce Website`}
+              goals={[
+                'Build a fullstack E-commerce React website from scratch with NextJS routing',
+                'Implement GraphQL, Prisma database, and Apollo for backend item queries and mutations',
+                'Currently In Development: Implementing User Authentication, Account Profiles, Cart and Payment Features, Search Functions',
+              ]}
+              challenges={[
+                'Learning how queries and mutations work for GraphQL',
+                'Backend server set-up with Apollo and GraphQL Yoga',
+                'Connecting custom client frontend CRUD features to the backend',
+              ]}
+              tech={[
+                'React',
+                'NextJS',
+                'GraphQL',
+                'Prisma',
+                'Apollo',
+                'GraphQL Yoga',
+              ]}
+              demo={`Video Demo`}
+              demoUrl={`https://drive.google.com/file/d/1HMLxyaNLLoRpaZ72ExAJquzgB4Bkoutg/view?usp=sharing`}
+              githubUrl={`https://github.com/crbilladeau/static-electronics`}
+              images={staticElectronicsImages}
               desktop={true}
+              mobileImages={''}
             />
           )}
-        /> */}
+        />
 
         <Route
           path='/travel-agency-landing'
@@ -101,6 +120,7 @@ const App = () => {
                 'Animate CSS',
                 'WOWjs',
               ]}
+              demo={`Demo`}
               demoUrl={`https://crbilladeau.github.io/landing-page-example/`}
               githubUrl={`https://github.com/crbilladeau/landing-page-example`}
               images={gofarImages}
@@ -147,6 +167,7 @@ const App = () => {
                 'Youtube Data API',
                 'axios',
               ]}
+              demo={`Demo`}
               demoUrl={`https://codesandbox.io/s/video-search-app-27b62`}
               githubUrl={`https://github.com/crbilladeau/video-search`}
               images={videoSearchImages}
