@@ -55,7 +55,11 @@ const About = () => {
                 <SkillTitle>Native</SkillTitle>
               </motion.div>
             </IconsContainer>
-            <InfoTitle>Tools</InfoTitle>
+            <InfoTitle>
+              <Hearts src={require('../assets/images/heart.png')} alt='heart' />
+              I Love to Use
+              <Hearts src={require('../assets/images/heart.png')} alt='heart' />
+            </InfoTitle>
             <IconsContainer>
               <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
                 <SmallIcon
@@ -89,11 +93,7 @@ const About = () => {
                 <SkillTitle>GraphQL</SkillTitle>
               </motion.div>
             </IconsContainer>
-            <InfoTitle>
-              <Hearts src={require('../assets/images/heart.png')} alt='heart' />
-              I Love to Use
-              <Hearts src={require('../assets/images/heart.png')} alt='heart' />
-            </InfoTitle>
+
             <LibraryContainer>
               <SkillTitle>
                 Terminal, Git, Redux, React Router, Express, MongoDB, styled
