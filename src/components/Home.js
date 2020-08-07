@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import Container from '../styles/Container';
 import Particles from './ParticlesBackground';
 import Landing from './Landing';
 import About from './About';
@@ -19,14 +19,5 @@ const Home = () => {
     </div>
   );
 };
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-`;
 
 export default Home;

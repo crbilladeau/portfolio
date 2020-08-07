@@ -18,13 +18,13 @@ import {
 const App = () => {
   AOS.init();
   return (
-    <div>
+    <>
       <Navigation />
       <Switch>
         <Route exact path='/' component={Home} />
         <Route
           path='/new-horizons-companion'
-          component={() => (
+          render={() => (
             <ProjectPage
               title={`New Horizons Companion`}
               goals={[
@@ -53,7 +53,7 @@ const App = () => {
         {/* 
         <Route
           path='/movie-finder-app'
-          component={() => (
+          render={() => (
             <ProjectPage
               title={`Movie Finder App`}
               goals={['Goals Placeholder']}
@@ -69,7 +69,7 @@ const App = () => {
 
         <Route
           path='/static-ecommerce'
-          component={() => (
+          render={() => (
             <ProjectPage
               title={`Static Electronics E-commerce Website`}
               goals={[
@@ -103,7 +103,7 @@ const App = () => {
 
         <Route
           path='/travel-agency-landing'
-          component={() => (
+          render={() => (
             <ProjectPage
               title={`Travel Agency Landing Page`}
               goals={[
@@ -136,7 +136,7 @@ const App = () => {
 
         <Route
           path='/dota-stats'
-          component={() => (
+          render={() => (
             <ProjectPage
               title={`DOTA 2 Stats App`}
               goals={[
@@ -170,7 +170,7 @@ const App = () => {
 
         <Route
           path='/video-search-app'
-          component={() => (
+          render={() => (
             <ProjectPage
               title={`Video Search App`}
               goals={[
@@ -200,7 +200,7 @@ const App = () => {
           )}
         />
       </Switch>
-    </div>
+    </>
   );
 };
 
