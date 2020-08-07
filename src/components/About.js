@@ -57,7 +57,7 @@ const About = () => {
             </IconsContainer>
             <InfoTitle>
               <Hearts src={require('../assets/images/heart.png')} alt='heart' />
-              I Love to Use
+              Tools
               <Hearts src={require('../assets/images/heart.png')} alt='heart' />
             </InfoTitle>
             <IconsContainer>
