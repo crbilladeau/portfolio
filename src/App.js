@@ -102,7 +102,7 @@ const App = () => {
         />
 
         <Route
-          path='/travel-agency-landing'
+          path='/go-far'
           render={() => (
             <ProjectPage
               title={`Travel Agency Landing Page`}

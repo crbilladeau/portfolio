@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
-import GalleryChanger from './GalleryChanger';
+import GalleryChanger from './utils/GalleryChanger';
 import staticVid from '../assets/static.mp4';
 
 const ProjectPage = ({

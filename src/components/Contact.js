@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import ContactForm from './Form';
+import ContactForm from './utils/Form';
 import background from '../assets/images/bg.svg';
 import background2 from '../assets/images/bg2.svg';
 
