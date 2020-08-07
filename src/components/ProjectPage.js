@@ -19,6 +19,7 @@ const ProjectPage = ({
   acnh,
   gofar,
   videoApp,
+  dotaStats,
 }) => {
   const techList = tech.map((tech) => (
     <ListItems key={tech.toString()}>{tech}</ListItems>
@@ -76,7 +77,7 @@ const ProjectPage = ({
         </InfoContainer>
       </Hexagon>
 
-      {acnh || videoApp || gofar ? (
+      {acnh || videoApp || gofar || dotaStats ? (
         <GalleryBox
           initial='out'
           animate='in'

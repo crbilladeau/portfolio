@@ -8,6 +8,7 @@ import gofarmobile from '../assets/images/gofarmobile1.png';
 import videoApp from '../assets/images/video-search-thumbnail.png';
 import videosearchmobile from '../assets/images/videosearchmobile.png';
 import staticElectronics from '../assets/images/static.png';
+import dotaStats from '../assets/images/dota-stats.png';
 import tbd from '../assets/images/placeholder.png';
 
 const Portfolio = () => {
@@ -66,7 +67,7 @@ const Portfolio = () => {
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
         >
-          <Link to='/static-ecommerce'>
+          <Link to='/static-ecommerce#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -104,23 +105,23 @@ const Portfolio = () => {
           </Link>
         </ProjectContainer>
 
-        {/* <ProjectContainer
+        <ProjectContainer
           data-aos='flip-right'
           data-aos-easing='ease-out-cubic'
           data-aos-duration='1000'
         >
-          <Link to='/stream-app'>
+          <Link to='/dota-stats#project'>
             <Project
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onMouseEnter={() => setHoverFive(true)}
               onMouseLeave={() => setHoverFive(false)}
-              tbd
+              dotaStats
             >
-              {hoverFive ? <ProjectTitle>Stream App</ProjectTitle> : null}
+              {hoverFive ? <ProjectTitle>DOTA 2 Stats App</ProjectTitle> : null}
             </Project>
           </Link>
-        </ProjectContainer> */}
+        </ProjectContainer>
 
         <ProjectContainer
           data-aos='flip-up'
@@ -197,6 +198,8 @@ const Project = styled(motion.div)`
       ? videoApp
       : props.staticElectronics
       ? staticElectronics
+      : props.dotaStats
+      ? dotaStats
       : tbd});
   background-size: cover;
   background-position: center;

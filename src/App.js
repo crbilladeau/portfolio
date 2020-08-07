@@ -12,6 +12,7 @@ import {
   videoSearchImages,
   videoMobile,
   staticElectronicsImages,
+  dotaStatsImages,
 } from './assets/image-data';
 
 const App = () => {
@@ -43,8 +44,8 @@ const App = () => {
               demoUrl={`https://expo.io/@cbilladeau/nh-companion`}
               githubUrl={`https://github.com/crbilladeau/new-horizons-companion`}
               images={acnhImages}
-              desktop={false}
               mobileImages={acnhImages}
+              desktop={false}
               acnh={true}
             />
           )}
@@ -126,28 +127,46 @@ const App = () => {
               demoUrl={`https://crbilladeau.github.io/landing-page-example/`}
               githubUrl={`https://github.com/crbilladeau/landing-page-example`}
               images={gofarImages}
-              desktop={true}
               mobileImages={gofarMobile}
+              desktop={true}
               gofar={true}
             />
           )}
         />
-        {/* 
+
         <Route
-          path='/stream-app'
+          path='/dota-stats'
           component={() => (
             <ProjectPage
-              title={`Stream App`}
-              goals={['Goal Placeholer']}
-              challenges={['Challenges Placeholder']}
-              tech={['React']}
-              demoUrl={`stream placeholder`}
-              githubUrl={`stream placeholder`}
-              images={['']}
+              title={`DOTA 2 Stats App`}
+              goals={[
+                'Learning React Bootstrap',
+                'Utilize useParams, useEffect, and useState React Hooks to display a hero information component while navigating with React Router between pages',
+                'Consume information off of the OpenDota API to display',
+                'Create clean, stylized, and responsive hero pages with React Bootstrap',
+              ]}
+              challenges={[
+                'Creating Routes based on hero name parameters to route to the correct page',
+                'Navigating the differences between React Bootstrap and Boostrap',
+                'Understanding how classNames and properties work for spacing in React Bootstrap',
+              ]}
+              tech={[
+                'React',
+                'React Router',
+                'axios',
+                'styled components',
+                'React Bootstrap',
+              ]}
+              demo={`Demo`}
+              demoUrl={`https://crbilladeau.github.io/dota-api/#/`}
+              githubUrl={`https://github.com/crbilladeau/dota-api`}
+              images={dotaStatsImages}
+              mobileImages={videoMobile}
+              dotaStats={true}
               desktop={true}
             />
           )}
-        /> */}
+        />
 
         <Route
           path='/video-search-app'
