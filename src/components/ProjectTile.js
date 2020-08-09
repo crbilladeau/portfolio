@@ -105,7 +105,7 @@ const ProjectTitle = styled.h2`
   font-family: 'Crimson Pro Italic', serif;
   font-size: 30px;
   font-weight: 200;
-  padding: 10px;
+  padding: 0.3em;
   position: absolute;
   text-align: center;
 `;
