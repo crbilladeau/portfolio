@@ -4,21 +4,30 @@ import { motion } from 'framer-motion';
 
 export const BigSkill = ({ skill }) => {
   return (
-    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-      <BigIcon src={skill.url} alt={skill.title} />
-      <SkillTitle>{skill.title}</SkillTitle>
-    </motion.div>
+    <>
+      <IconBox whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+        <BigIcon src={skill.url} alt={skill.title} />
+        <SkillTitle>{skill.title}</SkillTitle>
+      </IconBox>
+    </>
   );
 };
 
 export const SmallSkill = ({ skill }) => {
   return (
-    <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+    <IconBox whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
       <SmallIcon src={skill.url} alt={skill.title} />
       <SkillTitle>{skill.title}</SkillTitle>
-    </motion.div>
+    </IconBox>
   );
 };
+
+const IconBox = styled(motion.div)`
+  width: 200px;
+  @media screen and (max-width: 425px) {
+    width: auto;
+  }
+`;
 
 const BigIcon = styled.img`
   width: 80px;

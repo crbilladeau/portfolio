@@ -70,7 +70,7 @@ const InfoTitle = styled.h3`
 const IconsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   @media screen and (max-width: 425px) {
     flex: 1;
     width: 50%;

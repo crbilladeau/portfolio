@@ -2,61 +2,10 @@ import React, { useState, useLayoutEffect } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
+import MobileNav from './MobileNav';
 
-const Navigation = () => {
+export const Navigation = () => {
   const [navOpen, setNavOpen] = useState(false);
-
-  // const scrollTop = () => {
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  //   setNavOpen(!navOpen);
-  // };
-
-  const useLockBodyScroll = () => {
-    useLayoutEffect(() => {
-      const originalStyle = window.getComputedStyle(document.body).overflow;
-      document.body.style.overflow = 'hidden';
-      return () => (document.body.style.overflow = originalStyle);
-    }, []);
-  };
-
-  const MobilNavMenu = () => {
-    useLockBodyScroll();
-    return (
-      <NavContainer>
-        <CloseButton
-          src={require('../assets/images/close.png')}
-          alt='close button'
-          onClick={() => setNavOpen(!navOpen)}
-          navOpen={navOpen}
-        />
-        <LinkContainer>
-          <StyledLink to='/#home' onClick={() => setNavOpen(false)}>
-            HOME
-          </StyledLink>
-
-          <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
-            PORTFOLIO
-          </StyledLink>
-
-          <StyledLink to='/#about' onClick={() => setNavOpen(false)}>
-            ABOUT
-          </StyledLink>
-
-          <StyledLink to='/#contact' onClick={() => setNavOpen(false)}>
-            CONTACT
-          </StyledLink>
-
-          <StyledALink
-            href='https://crbilladeau.github.io/resume/'
-            target='_blank'
-            onClick={() => setNavOpen(false)}
-          >
-            RESUME
-          </StyledALink>
-        </LinkContainer>
-      </NavContainer>
-    );
-  };
 
   return (
     <>
@@ -75,7 +24,7 @@ const Navigation = () => {
         transition={navTransition}
       >
         {navOpen ? (
-          <MobilNavMenu />
+          <MobileNav setNavOpen={setNavOpen} navOpen={navOpen} />
         ) : (
           <NavContainer>
             <CloseButton
@@ -86,24 +35,13 @@ const Navigation = () => {
             />
             <LinkContainer>
               <StyledLink to='/#home'>HOME</StyledLink>
-
-              <StyledLink to='/#portfolio' onClick={() => setNavOpen(false)}>
-                PORTFOLIO
-              </StyledLink>
-
-              <StyledLink to='/#about' onClick={() => setNavOpen(false)}>
-                ABOUT
-              </StyledLink>
-
-              <StyledLink to='/#contact' onClick={() => setNavOpen(false)}>
-                CONTACT
-              </StyledLink>
-
+              <StyledLink to='/#portfolio'>PORTFOLIO</StyledLink>
+              <StyledLink to='/#about'>ABOUT</StyledLink>
+              <StyledLink to='/#contact'>CONTACT</StyledLink>
               <StyledALink
                 href='https://crbilladeau.github.io/resume/'
                 target='_blank'
                 rel='noopener noreferrer'
-                onClick={() => setNavOpen(false)}
               >
                 RESUME
               </StyledALink>
@@ -151,14 +89,14 @@ const Icon = styled.img`
   }
 `;
 
-const CloseButton = styled.img`
+export const CloseButton = styled.img`
   align-self: flex-end;
   margin: 1.5em 1.5em;
   width: 64px;
   cursor: pointer;
 `;
 
-const NavContainer = styled.div`
+export const NavContainer = styled.div`
   display: flex;
   z-index: 50;
   @media screen and (min-width: 769px) {
@@ -175,7 +113,7 @@ const NavContainer = styled.div`
   }
 `;
 
-const LinkContainer = styled.div`
+export const LinkContainer = styled.div`
   display: flex;
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -183,7 +121,7 @@ const LinkContainer = styled.div`
   }
 `;
 
-const StyledLink = styled(Link)`
+export const StyledLink = styled(Link)`
   background-color: transparent;
   border-bottom: 3px solid transparent;
   color: magenta;
@@ -204,7 +142,7 @@ const StyledLink = styled(Link)`
   }
 `;
 
-const StyledALink = styled.a`
+export const StyledALink = styled.a`
   background-color: transparent;
   border-bottom: 3px solid transparent;
   color: magenta;
