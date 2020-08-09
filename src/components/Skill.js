@@ -47,6 +47,7 @@ const SkillTitle = styled.h4`
   font-family: 'Source Code Pro', monospace;
   font-size: 18px;
   font-weight: 300;
+  margin: 0 0.5em;
   z-index: 20;
   @media screen and (max-width: 1440px) {
     font-size: 16px;

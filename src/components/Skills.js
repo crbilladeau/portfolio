@@ -39,10 +39,12 @@ const InfoTitle = styled.h3`
   font-family: 'TypeCond', sans-serif;
   font-size: 35px;
   margin: 0.5em 0 0.2em 0;
+  padding: 0em 0 0.3em 0;
   text-transform: uppercase;
   z-index: 20;
   &:nth-child(3) {
     margin: 0 0 0 0;
+    padding: 0.8em 0 0.3em 0;
   }
   @media screen and (max-width: 1440px) {
     font-size: 28px;
@@ -79,6 +81,7 @@ const IconsContainer = styled.div`
 
 const Hearts = styled.img`
   width: 60px;
+
   @media screen and (max-width: 1440px) {
     width: 30px;
   }

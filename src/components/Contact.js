@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import ContactForm from './utils/Form';
+import Social from './Social';
 import background from '../assets/images/bg.svg';
 import background2 from '../assets/images/bg2.svg';
 
 const Contact = () => {
-  const openUrl = (url) => {
-    window.open(url, '_blank');
-  };
-
   return (
     <ContactWrapper>
       <Background>
@@ -31,36 +27,7 @@ const Contact = () => {
             data-aos-duration='800'
           >
             <ContactForm />
-            <IconContainer>
-              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <Icon
-                  onClick={() => openUrl('https://github.com/crbilladeau')}
-                  src={require('../assets/images/github.png')}
-                  alt='github'
-                />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <Icon
-                  onClick={() =>
-                    openUrl(
-                      'https://www.linkedin.com/in/charlie-billadeau-033/'
-                    )
-                  }
-                  src={require('../assets/images/linkedin.png')}
-                  alt='linkedin'
-                />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
-                <Icon
-                  onClick={() =>
-                    openUrl('https://codesandbox.io/u/crbilladeau')
-                  }
-                  src={require('../assets/images/codesandbox.png')}
-                  alt='codesandbox'
-                />
-              </motion.div>
-            </IconContainer>
-            <Email>charlie.billadeau@gmail.com</Email>
+            <Social />
           </FormContainer>
         </Box>
       </Background>
@@ -96,14 +63,14 @@ const Background = styled.div`
   }
 `;
 
-const Header = styled.h2`
-  :before {
-    display: block;
-    content: ' ';
-    visibility: hidden;
-    pointer-events: none;
-  }
-`;
+// const Header = styled.h2`
+//   :before {
+//     display: block;
+//     content: ' ';
+//     visibility: hidden;
+//     pointer-events: none;
+//   }
+// `;
 
 const Box = styled.div`
   margin: 3em 0em;
@@ -130,38 +97,6 @@ const Title = styled.h2`
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-const IconContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-`;
-
-const Icon = styled.img`
-  cursor: pointer;
-  margin: 10px 20px;
-  width: 50px;
-  @media screen and (max-width: 768px) {
-    margin: 0.2em 1.5em;
-  }
-  @media screen and (max-width: 425px) {
-    width: 45px;
-  }
-`;
-
-const Email = styled.h4`
-  color: #211a23;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 1pt;
-  padding: 10px;
-  @media screen and (max-width: 768px) {
-    padding: 0.5em 0em;
-  }
-  @media screen and (max-width: 425px) {
-    padding: 0.2em 0em;
-  }
 `;
 
 export default Contact;
