@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.88fe5d04.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.88fe5d04.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.77f9ef1b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.77f9ef1b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.f4f2abbf.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.f4f2abbf.js.map",
     "static/css/2.8f2eca68.chunk.css": "/portfolio/static/css/2.8f2eca68.chunk.css",
-    "static/js/2.16741608.chunk.js": "/portfolio/static/js/2.16741608.chunk.js",
-    "static/js/2.16741608.chunk.js.map": "/portfolio/static/js/2.16741608.chunk.js.map",
+    "static/js/2.3b792908.chunk.js": "/portfolio/static/js/2.3b792908.chunk.js",
+    "static/js/2.3b792908.chunk.js.map": "/portfolio/static/js/2.3b792908.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.41ad827186abefdcab0bc7ed9cd83404.js": "/portfolio/precache-manifest.41ad827186abefdcab0bc7ed9cd83404.js",
+    "precache-manifest.178a0115a0cc735f66295dd95d33060f.js": "/portfolio/precache-manifest.178a0115a0cc735f66295dd95d33060f.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.8f2eca68.chunk.css.map": "/portfolio/static/css/2.8f2eca68.chunk.css.map",
-    "static/js/2.16741608.chunk.js.LICENSE.txt": "/portfolio/static/js/2.16741608.chunk.js.LICENSE.txt",
+    "static/js/2.3b792908.chunk.js.LICENSE.txt": "/portfolio/static/js/2.3b792908.chunk.js.LICENSE.txt",
     "static/media/ACNH.png": "/portfolio/static/media/ACNH.a5806347.png",
     "static/media/ACNH1.png": "/portfolio/static/media/ACNH1.1258edc8.png",
     "static/media/ACNH2.png": "/portfolio/static/media/ACNH2.8d76b719.png",
@@ -48,12 +48,15 @@
     "static/media/videomobile1.png": "/portfolio/static/media/videomobile1.eea55723.png",
     "static/media/videomobile2.png": "/portfolio/static/media/videomobile2.2e7b0fc8.png",
     "static/media/videosearch1.jpg": "/portfolio/static/media/videosearch1.c0dad5db.jpg",
-    "static/media/videosearchmobile.png": "/portfolio/static/media/videosearchmobile.fe3e9658.png"
+    "static/media/videosearchmobile.png": "/portfolio/static/media/videosearchmobile.fe3e9658.png",
+    "static/media/watcher.png": "/portfolio/static/media/watcher.b365b6fd.png",
+    "static/media/watcher2.png": "/portfolio/static/media/watcher2.646129a2.png",
+    "static/media/watcher3.png": "/portfolio/static/media/watcher3.71dda90b.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f4f2abbf.js",
     "static/css/2.8f2eca68.chunk.css",
-    "static/js/2.16741608.chunk.js",
-    "static/js/main.88fe5d04.chunk.js"
+    "static/js/2.3b792908.chunk.js",
+    "static/js/main.77f9ef1b.chunk.js"
   ]
 }
