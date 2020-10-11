@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 // image imports
 import acnh from '../assets/images/ACNH.png';
+import watcher from '../assets/images/watcher.png';
 import gofar from '../assets/images/go-far.PNG';
 import gofarmobile from '../assets/images/gofarmobile1.png';
 import videoApp from '../assets/images/video-search-thumbnail.png';
@@ -59,6 +60,8 @@ const Project = styled(motion.div)`
   background-image: url(${(props) =>
     props.image === 'acnh'
       ? acnh
+      : props.image === 'watcher'
+      ? watcher
       : props.image === 'go-far'
       ? gofar
       : props.image === 'video'
@@ -86,6 +89,8 @@ const Project = styled(motion.div)`
     background-image: url(${(props) =>
       props.image === 'acnh'
         ? acnh
+        : props.image === 'watcher'
+        ? watcher
         : props.image === 'go-far'
         ? gofarmobile
         : props.image === 'video'

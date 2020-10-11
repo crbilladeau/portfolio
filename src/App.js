@@ -7,6 +7,7 @@ import Navigation from './components/Navigation';
 import ProjectPage from './components/ProjectPage';
 import {
   acnhImages,
+  watcherImages,
   gofarImages,
   gofarMobile,
   videoSearchImages,
@@ -50,22 +51,32 @@ const App = () => {
             />
           )}
         />
-        {/* 
+
         <Route
-          path='/movie-finder-app'
+          path='/watcher'
           render={() => (
             <ProjectPage
-              title={`Movie Finder App`}
-              goals={['Goals Placeholder']}
-              challenges={['Challenges Placeholder']}
-              tech={['React']}
-              demoUrl={`https://github.com`}
-              githubUrl={`https://github.com`}
-              images={['']}
+              title={`Watcher`}
+              goals={[
+                'Create a unique movie streaming website',
+                'Fetch and display data from The Movie Database API for movies and TV shows',
+                'Make the app searchable through a search bar and navigatable with React Router',
+              ]}
+              challenges={[
+                'Controlling data fetch calls to the API',
+                'Persisting state on page refresh without refetching data',
+                'Fetching the correct show ID based on movie or TV show',
+              ]}
+              tech={['React, React Router, styled components, axios, TMDB API']}
+              demoUrl={`https://github.com/crbilladeau/watcher`}
+              githubUrl={`https://github.com/crbilladeau/watcher`}
+              images={watcherImages}
               desktop={true}
+              mobileImages={''}
+              watcher={true}
             />
           )}
-        /> */}
+        />
 
         <Route
           path='/static-ecommerce'

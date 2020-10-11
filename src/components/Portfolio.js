@@ -16,11 +16,12 @@ const Portfolio = () => {
       url: '/static-ecommerce#project',
       image: 'static',
     },
-    // {
-    //   id: 3,
-    //   title: 'Watcher',
-    //   url: '/watcher#project',
-    // },
+    {
+      id: 3,
+      title: 'Watcher',
+      url: '/watcher#project',
+      image: 'watcher',
+    },
     {
       id: 4,
       title: 'Go Far Travel Agency',

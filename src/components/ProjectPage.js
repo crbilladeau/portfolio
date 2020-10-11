@@ -17,6 +17,7 @@ const ProjectPage = ({
   mobileImages,
   desktop,
   acnh,
+  watcher,
   gofar,
   videoApp,
   dotaStats,
@@ -77,7 +78,7 @@ const ProjectPage = ({
         </InfoContainer>
       </Hexagon>
 
-      {acnh || videoApp || gofar || dotaStats ? (
+      {acnh || watcher || videoApp || gofar || dotaStats ? (
         <GalleryBox
           initial='out'
           animate='in'
