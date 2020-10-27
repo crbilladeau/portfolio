@@ -18,9 +18,10 @@ const About = () => {
             <BigSkills />
             <SmallSkills />
             <SkillContainer>
+            {/* TODO: make this into a frontend and backend section */}
               <SkillTitle>
-                Terminal, Git, Redux, React Router, Express, MongoDB, styled
-                components, Apollo, jQuery, axios, Auth0, lodash, Framer Motion,
+                Terminal, Git, Redux, React Router, Express, NextJS, MongoDB, Sanity, styled
+                components, Gatsby, Apollo, jQuery, axios, Auth0, lodash, Framer Motion,
                 Bootstrap, Foundation, Materialize, Semantic UI
               </SkillTitle>
             </SkillContainer>
