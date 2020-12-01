@@ -61,14 +61,15 @@ const App = () => {
                 'Create a unique movie streaming website',
                 'Fetch and display data from The Movie Database API for movies and TV shows',
                 'Make the app searchable through a search bar and navigatable with React Router',
+                'Deploy to Google Firebase'
               ]}
               challenges={[
                 'Controlling data fetch calls to the API',
                 'Persisting state on page refresh without refetching data',
                 'Fetching the correct show ID based on movie or TV show',
               ]}
-              tech={['React, React Router, styled components, axios, TMDB API']}
-              demoUrl={`https://github.com/crbilladeau/watcher`}
+              tech={['React, React Router, Firebase, styled components, axios, TMDB API']}
+              demoUrl={`https://watcher-6ad27.web.app/`}
               githubUrl={`https://github.com/crbilladeau/watcher`}
               images={watcherImages}
               desktop={true}
