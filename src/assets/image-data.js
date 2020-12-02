@@ -5,6 +5,9 @@ import ACNH4 from './images/ACNH4.png';
 import watcher from './images/watcher.png';
 import watcher2 from './images/watcher2.png';
 import watcher3 from './images/watcher3.png';
+import watchermobile1 from './images/watcher-mobile1.png';
+import watchermobile2 from './images/watcher-mobile2.png';
+import watchermobile3 from './images/watcher-mobile3.png';
 import gofar1 from './images/gofar1.jpg';
 import gofar2 from './images/gofar2.jpg';
 import gofar3 from './images/gofar3.jpg';
@@ -25,6 +28,7 @@ import dotaStats2 from './images/dota-stats2.png';
 
 export const acnhImages = [ACNH1, ACNH2, ACNH3, ACNH4];
 export const watcherImages = [watcher, watcher2, watcher3];
+export const watcherMobile = [watchermobile1, watchermobile2, watchermobile3];
 export const gofarImages = [gofar1, gofar2, gofar3];
 export const gofarMobile = [
   gofarmobile,

@@ -8,6 +8,7 @@ import ProjectPage from './components/ProjectPage';
 import {
   acnhImages,
   watcherImages,
+  watcherMobile,
   gofarImages,
   gofarMobile,
   videoSearchImages,
@@ -73,7 +74,7 @@ const App = () => {
               githubUrl={`https://github.com/crbilladeau/watcher`}
               images={watcherImages}
               desktop={true}
-              mobileImages={''}
+              mobileImages={watcherMobile}
               watcher={true}
             />
           )}
