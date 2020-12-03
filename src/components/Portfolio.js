@@ -34,12 +34,12 @@ const Portfolio = () => {
       url: '/dota-stats#project',
       image: 'dota',
     },
-    {
-      id: 6,
-      title: 'Video Search App',
-      url: '/video-search-app#project',
-      image: 'video',
-    },
+    // {
+    //   id: 6,
+    //   title: 'Video Search App',
+    //   url: '/video-search-app#project',
+    //   image: 'video',
+    // },
   ];
 
   return (

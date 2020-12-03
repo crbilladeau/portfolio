@@ -181,7 +181,7 @@ const App = () => {
           )}
         />
 
-        <Route
+        {/* <Route
           path='/video-search-app'
           render={() => (
             <ProjectPage
@@ -211,7 +211,7 @@ const App = () => {
               videoApp={true}
             />
           )}
-        />
+        /> */}
       </Switch>
     </>
   );
