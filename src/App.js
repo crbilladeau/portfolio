@@ -43,7 +43,7 @@ const App = () => {
               ]}
               tech={['React Native', 'CSS3', 'Expo', 'lodash']}
               demo={`Demo`}
-              demoUrl={`https://expo.io/@cbilladeau/nh-companion`}
+              demoUrl={`https://apps.apple.com/us/app/new-horizons-companion/id1503252262?ls=1`}
               githubUrl={`https://github.com/crbilladeau/new-horizons-companion`}
               images={acnhImages}
               mobileImages={acnhImages}
